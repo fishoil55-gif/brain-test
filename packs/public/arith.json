@@ -1,0 +1,2550 @@
+{
+ "packId": "gen-arith",
+ "schemaVersion": 1,
+ "title": "빠른 계산",
+ "locale": "ko-KR",
+ "visibility": "public",
+ "scoringModel": "correct",
+ "intro": "암산 속도를 재는 문제입니다. 제한시간은 자체 기준이며, 시간이 지나도 끝까지 풀 수 있습니다. 어려움 단계는 곱셈·나눗셈과 괄호를 먼저 계산해야 합니다.",
+ "provenance": {
+  "kind": "generated",
+  "source": "자체 생성기 engine/generators/arithmetic.ts (시드 2028)"
+ },
+ "tests": [
+  {
+   "testId": "calc-easy",
+   "order": 1,
+   "title": "빠른 계산 · 쉬움 1",
+   "questionCount": 20,
+   "timeLimitSec": 60,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "15 + 78 = ?",
+     "answer": "93",
+     "value": 93,
+     "explanation": "15 + 78 = 93"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "44 − 21 = ?",
+     "answer": "23",
+     "value": 23,
+     "explanation": "44 − 21 = 23"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "5 × 8 = ?",
+     "answer": "40",
+     "value": 40,
+     "explanation": "5 × 8 = 40"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "17 + 24 = ?",
+     "answer": "41",
+     "value": 41,
+     "explanation": "17 + 24 = 41"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "79 − 15 = ?",
+     "answer": "64",
+     "value": 64,
+     "explanation": "79 − 15 = 64"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "8 × 9 = ?",
+     "answer": "72",
+     "value": 72,
+     "explanation": "8 × 9 = 72"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "23 + 47 = ?",
+     "answer": "70",
+     "value": 70,
+     "explanation": "23 + 47 = 70"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "32 − 25 = ?",
+     "answer": "7",
+     "value": 7,
+     "explanation": "32 − 25 = 7"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "6 × 8 = ?",
+     "answer": "48",
+     "value": 48,
+     "explanation": "6 × 8 = 48"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "87 + 13 = ?",
+     "answer": "100",
+     "value": 100,
+     "explanation": "87 + 13 = 100"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "80 − 48 = ?",
+     "answer": "32",
+     "value": 32,
+     "explanation": "80 − 48 = 32"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "8 × 3 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "8 × 3 = 24"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "27 + 79 = ?",
+     "answer": "106",
+     "value": 106,
+     "explanation": "27 + 79 = 106"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "45 − 11 = ?",
+     "answer": "34",
+     "value": 34,
+     "explanation": "45 − 11 = 34"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "9 × 4 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "9 × 4 = 36"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "70 + 79 = ?",
+     "answer": "149",
+     "value": 149,
+     "explanation": "70 + 79 = 149"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "46 − 19 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "46 − 19 = 27"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "7 × 9 = ?",
+     "answer": "63",
+     "value": 63,
+     "explanation": "7 × 9 = 63"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "35 + 77 = ?",
+     "answer": "112",
+     "value": 112,
+     "explanation": "35 + 77 = 112"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "52 − 27 = ?",
+     "answer": "25",
+     "value": 25,
+     "explanation": "52 − 27 = 25"
+    }
+   ]
+  },
+  {
+   "testId": "calc-easy-2",
+   "order": 2,
+   "title": "빠른 계산 · 쉬움 2",
+   "questionCount": 20,
+   "timeLimitSec": 60,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "9 × 6 = ?",
+     "answer": "54",
+     "value": 54,
+     "explanation": "9 × 6 = 54"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "28 + 86 = ?",
+     "answer": "114",
+     "value": 114,
+     "explanation": "28 + 86 = 114"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "94 − 31 = ?",
+     "answer": "63",
+     "value": 63,
+     "explanation": "94 − 31 = 63"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "7 × 7 = ?",
+     "answer": "49",
+     "value": 49,
+     "explanation": "7 × 7 = 49"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "19 + 68 = ?",
+     "answer": "87",
+     "value": 87,
+     "explanation": "19 + 68 = 87"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "75 − 39 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "75 − 39 = 36"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "5 × 9 = ?",
+     "answer": "45",
+     "value": 45,
+     "explanation": "5 × 9 = 45"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "86 + 69 = ?",
+     "answer": "155",
+     "value": 155,
+     "explanation": "86 + 69 = 155"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "51 − 25 = ?",
+     "answer": "26",
+     "value": 26,
+     "explanation": "51 − 25 = 26"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "9 × 8 = ?",
+     "answer": "72",
+     "value": 72,
+     "explanation": "9 × 8 = 72"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "39 + 79 = ?",
+     "answer": "118",
+     "value": 118,
+     "explanation": "39 + 79 = 118"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "62 − 48 = ?",
+     "answer": "14",
+     "value": 14,
+     "explanation": "62 − 48 = 14"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "7 × 5 = ?",
+     "answer": "35",
+     "value": 35,
+     "explanation": "7 × 5 = 35"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "63 + 67 = ?",
+     "answer": "130",
+     "value": 130,
+     "explanation": "63 + 67 = 130"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "56 − 33 = ?",
+     "answer": "23",
+     "value": 23,
+     "explanation": "56 − 33 = 23"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "3 × 6 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "3 × 6 = 18"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "58 + 65 = ?",
+     "answer": "123",
+     "value": 123,
+     "explanation": "58 + 65 = 123"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "53 − 34 = ?",
+     "answer": "19",
+     "value": 19,
+     "explanation": "53 − 34 = 19"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "8 × 6 = ?",
+     "answer": "48",
+     "value": 48,
+     "explanation": "8 × 6 = 48"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "61 + 50 = ?",
+     "answer": "111",
+     "value": 111,
+     "explanation": "61 + 50 = 111"
+    }
+   ]
+  },
+  {
+   "testId": "calc-easy-3",
+   "order": 3,
+   "title": "빠른 계산 · 쉬움 3",
+   "questionCount": 20,
+   "timeLimitSec": 60,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "53 − 35 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "53 − 35 = 18"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "6 × 6 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "6 × 6 = 36"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "15 + 13 = ?",
+     "answer": "28",
+     "value": 28,
+     "explanation": "15 + 13 = 28"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "73 − 46 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "73 − 46 = 27"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "6 × 3 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "6 × 3 = 18"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "17 + 64 = ?",
+     "answer": "81",
+     "value": 81,
+     "explanation": "17 + 64 = 81"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "53 − 28 = ?",
+     "answer": "25",
+     "value": 25,
+     "explanation": "53 − 28 = 25"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "9 × 5 = ?",
+     "answer": "45",
+     "value": 45,
+     "explanation": "9 × 5 = 45"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "46 + 77 = ?",
+     "answer": "123",
+     "value": 123,
+     "explanation": "46 + 77 = 123"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "47 − 29 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "47 − 29 = 18"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "4 × 4 = ?",
+     "answer": "16",
+     "value": 16,
+     "explanation": "4 × 4 = 16"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "64 + 24 = ?",
+     "answer": "88",
+     "value": 88,
+     "explanation": "64 + 24 = 88"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "48 − 30 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "48 − 30 = 18"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "6 × 4 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "6 × 4 = 24"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "58 + 23 = ?",
+     "answer": "81",
+     "value": 81,
+     "explanation": "58 + 23 = 81"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "77 − 48 = ?",
+     "answer": "29",
+     "value": 29,
+     "explanation": "77 − 48 = 29"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "7 × 3 = ?",
+     "answer": "21",
+     "value": 21,
+     "explanation": "7 × 3 = 21"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "28 + 55 = ?",
+     "answer": "83",
+     "value": 83,
+     "explanation": "28 + 55 = 83"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "42 − 16 = ?",
+     "answer": "26",
+     "value": 26,
+     "explanation": "42 − 16 = 26"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "9 × 3 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "9 × 3 = 27"
+    }
+   ]
+  },
+  {
+   "testId": "calc-easy-4",
+   "order": 4,
+   "title": "빠른 계산 · 쉬움 4",
+   "questionCount": 20,
+   "timeLimitSec": 60,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "34 + 48 = ?",
+     "answer": "82",
+     "value": 82,
+     "explanation": "34 + 48 = 82"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "40 − 23 = ?",
+     "answer": "17",
+     "value": 17,
+     "explanation": "40 − 23 = 17"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "5 × 6 = ?",
+     "answer": "30",
+     "value": 30,
+     "explanation": "5 × 6 = 30"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "53 + 72 = ?",
+     "answer": "125",
+     "value": 125,
+     "explanation": "53 + 72 = 125"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "32 − 22 = ?",
+     "answer": "10",
+     "value": 10,
+     "explanation": "32 − 22 = 10"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "3 × 3 = ?",
+     "answer": "9",
+     "value": 9,
+     "explanation": "3 × 3 = 9"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "44 + 20 = ?",
+     "answer": "64",
+     "value": 64,
+     "explanation": "44 + 20 = 64"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "42 − 22 = ?",
+     "answer": "20",
+     "value": 20,
+     "explanation": "42 − 22 = 20"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "4 × 3 = ?",
+     "answer": "12",
+     "value": 12,
+     "explanation": "4 × 3 = 12"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "66 + 83 = ?",
+     "answer": "149",
+     "value": 149,
+     "explanation": "66 + 83 = 149"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "78 − 49 = ?",
+     "answer": "29",
+     "value": 29,
+     "explanation": "78 − 49 = 29"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "4 × 9 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "4 × 9 = 36"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "49 + 30 = ?",
+     "answer": "79",
+     "value": 79,
+     "explanation": "49 + 30 = 79"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "99 − 18 = ?",
+     "answer": "81",
+     "value": 81,
+     "explanation": "99 − 18 = 81"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "3 × 8 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "3 × 8 = 24"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "47 + 51 = ?",
+     "answer": "98",
+     "value": 98,
+     "explanation": "47 + 51 = 98"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "37 − 32 = ?",
+     "answer": "5",
+     "value": 5,
+     "explanation": "37 − 32 = 5"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "4 × 8 = ?",
+     "answer": "32",
+     "value": 32,
+     "explanation": "4 × 8 = 32"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "76 + 46 = ?",
+     "answer": "122",
+     "value": 122,
+     "explanation": "76 + 46 = 122"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "57 − 28 = ?",
+     "answer": "29",
+     "value": 29,
+     "explanation": "57 − 28 = 29"
+    }
+   ]
+  },
+  {
+   "testId": "calc-easy-5",
+   "order": 5,
+   "title": "빠른 계산 · 쉬움 5",
+   "questionCount": 20,
+   "timeLimitSec": 60,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "4 × 7 = ?",
+     "answer": "28",
+     "value": 28,
+     "explanation": "4 × 7 = 28"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "24 + 83 = ?",
+     "answer": "107",
+     "value": 107,
+     "explanation": "24 + 83 = 107"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "50 − 28 = ?",
+     "answer": "22",
+     "value": 22,
+     "explanation": "50 − 28 = 22"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "9 × 7 = ?",
+     "answer": "63",
+     "value": 63,
+     "explanation": "9 × 7 = 63"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "89 + 37 = ?",
+     "answer": "126",
+     "value": 126,
+     "explanation": "89 + 37 = 126"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "39 − 18 = ?",
+     "answer": "21",
+     "value": 21,
+     "explanation": "39 − 18 = 21"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "7 × 4 = ?",
+     "answer": "28",
+     "value": 28,
+     "explanation": "7 × 4 = 28"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "39 + 18 = ?",
+     "answer": "57",
+     "value": 57,
+     "explanation": "39 + 18 = 57"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "93 − 45 = ?",
+     "answer": "48",
+     "value": 48,
+     "explanation": "93 − 45 = 48"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "7 × 6 = ?",
+     "answer": "42",
+     "value": 42,
+     "explanation": "7 × 6 = 42"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "57 + 79 = ?",
+     "answer": "136",
+     "value": 136,
+     "explanation": "57 + 79 = 136"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "65 − 36 = ?",
+     "answer": "29",
+     "value": 29,
+     "explanation": "65 − 36 = 29"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "3 × 4 = ?",
+     "answer": "12",
+     "value": 12,
+     "explanation": "3 × 4 = 12"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "31 + 69 = ?",
+     "answer": "100",
+     "value": 100,
+     "explanation": "31 + 69 = 100"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "70 − 60 = ?",
+     "answer": "10",
+     "value": 10,
+     "explanation": "70 − 60 = 10"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "4 × 5 = ?",
+     "answer": "20",
+     "value": 20,
+     "explanation": "4 × 5 = 20"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "33 + 54 = ?",
+     "answer": "87",
+     "value": 87,
+     "explanation": "33 + 54 = 87"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "70 − 23 = ?",
+     "answer": "47",
+     "value": 47,
+     "explanation": "70 − 23 = 47"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "4 × 6 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "4 × 6 = 24"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "27 + 59 = ?",
+     "answer": "86",
+     "value": 86,
+     "explanation": "27 + 59 = 86"
+    }
+   ]
+  },
+  {
+   "testId": "calc-medium",
+   "order": 6,
+   "title": "빠른 계산 · 보통 1",
+   "questionCount": 20,
+   "timeLimitSec": 120,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "35 × 5 = ?",
+     "answer": "175",
+     "value": 175,
+     "explanation": "35 × 5 = 175"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "154 ÷ 7 = ?",
+     "answer": "22",
+     "value": 22,
+     "explanation": "7 × 22 = 154이므로 154 ÷ 7 = 22"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "479 + 49 = ?",
+     "answer": "528",
+     "value": 528,
+     "explanation": "479 + 49 = 528"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "44 × 5 = ?",
+     "answer": "220",
+     "value": 220,
+     "explanation": "44 × 5 = 220"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "63 ÷ 3 = ?",
+     "answer": "21",
+     "value": 21,
+     "explanation": "3 × 21 = 63이므로 63 ÷ 3 = 21"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "348 − 84 = ?",
+     "answer": "264",
+     "value": 264,
+     "explanation": "348 − 84 = 264"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "19 × 3 = ?",
+     "answer": "57",
+     "value": 57,
+     "explanation": "19 × 3 = 57"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "272 ÷ 8 = ?",
+     "answer": "34",
+     "value": 34,
+     "explanation": "8 × 34 = 272이므로 272 ÷ 8 = 34"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "141 − 66 = ?",
+     "answer": "75",
+     "value": 75,
+     "explanation": "141 − 66 = 75"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "35 × 9 = ?",
+     "answer": "315",
+     "value": 315,
+     "explanation": "35 × 9 = 315"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "105 ÷ 3 = ?",
+     "answer": "35",
+     "value": 35,
+     "explanation": "3 × 35 = 105이므로 105 ÷ 3 = 35"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "337 + 97 = ?",
+     "answer": "434",
+     "value": 434,
+     "explanation": "337 + 97 = 434"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "43 × 3 = ?",
+     "answer": "129",
+     "value": 129,
+     "explanation": "43 × 3 = 129"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "288 ÷ 8 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "8 × 36 = 288이므로 288 ÷ 8 = 36"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "135 + 48 = ?",
+     "answer": "183",
+     "value": 183,
+     "explanation": "135 + 48 = 183"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "25 × 3 = ?",
+     "answer": "75",
+     "value": 75,
+     "explanation": "25 × 3 = 75"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "174 ÷ 6 = ?",
+     "answer": "29",
+     "value": 29,
+     "explanation": "6 × 29 = 174이므로 174 ÷ 6 = 29"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "845 + 81 = ?",
+     "answer": "926",
+     "value": 926,
+     "explanation": "845 + 81 = 926"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "22 × 7 = ?",
+     "answer": "154",
+     "value": 154,
+     "explanation": "22 × 7 = 154"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "315 ÷ 9 = ?",
+     "answer": "35",
+     "value": 35,
+     "explanation": "9 × 35 = 315이므로 315 ÷ 9 = 35"
+    }
+   ]
+  },
+  {
+   "testId": "calc-medium-2",
+   "order": 7,
+   "title": "빠른 계산 · 보통 2",
+   "questionCount": 20,
+   "timeLimitSec": 120,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "641 + 86 = ?",
+     "answer": "727",
+     "value": 727,
+     "explanation": "641 + 86 = 727"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "41 × 6 = ?",
+     "answer": "246",
+     "value": 246,
+     "explanation": "41 × 6 = 246"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "342 ÷ 9 = ?",
+     "answer": "38",
+     "value": 38,
+     "explanation": "9 × 38 = 342이므로 342 ÷ 9 = 38"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "311 + 85 = ?",
+     "answer": "396",
+     "value": 396,
+     "explanation": "311 + 85 = 396"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "39 × 6 = ?",
+     "answer": "234",
+     "value": 234,
+     "explanation": "39 × 6 = 234"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "70 ÷ 5 = ?",
+     "answer": "14",
+     "value": 14,
+     "explanation": "5 × 14 = 70이므로 70 ÷ 5 = 14"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "451 − 38 = ?",
+     "answer": "413",
+     "value": 413,
+     "explanation": "451 − 38 = 413"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "37 × 8 = ?",
+     "answer": "296",
+     "value": 296,
+     "explanation": "37 × 8 = 296"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "333 ÷ 9 = ?",
+     "answer": "37",
+     "value": 37,
+     "explanation": "9 × 37 = 333이므로 333 ÷ 9 = 37"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "264 + 57 = ?",
+     "answer": "321",
+     "value": 321,
+     "explanation": "264 + 57 = 321"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "42 × 7 = ?",
+     "answer": "294",
+     "value": 294,
+     "explanation": "42 × 7 = 294"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "160 ÷ 5 = ?",
+     "answer": "32",
+     "value": 32,
+     "explanation": "5 × 32 = 160이므로 160 ÷ 5 = 32"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "427 + 25 = ?",
+     "answer": "452",
+     "value": 452,
+     "explanation": "427 + 25 = 452"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "27 × 9 = ?",
+     "answer": "243",
+     "value": 243,
+     "explanation": "27 × 9 = 243"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "144 ÷ 9 = ?",
+     "answer": "16",
+     "value": 16,
+     "explanation": "9 × 16 = 144이므로 144 ÷ 9 = 16"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "898 + 94 = ?",
+     "answer": "992",
+     "value": 992,
+     "explanation": "898 + 94 = 992"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "18 × 9 = ?",
+     "answer": "162",
+     "value": 162,
+     "explanation": "18 × 9 = 162"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "153 ÷ 9 = ?",
+     "answer": "17",
+     "value": 17,
+     "explanation": "9 × 17 = 153이므로 153 ÷ 9 = 17"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "595 − 80 = ?",
+     "answer": "515",
+     "value": 515,
+     "explanation": "595 − 80 = 515"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "23 × 8 = ?",
+     "answer": "184",
+     "value": 184,
+     "explanation": "23 × 8 = 184"
+    }
+   ]
+  },
+  {
+   "testId": "calc-medium-3",
+   "order": 8,
+   "title": "빠른 계산 · 보통 3",
+   "questionCount": 20,
+   "timeLimitSec": 120,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "243 ÷ 9 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "9 × 27 = 243이므로 243 ÷ 9 = 27"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "743 − 56 = ?",
+     "answer": "687",
+     "value": 687,
+     "explanation": "743 − 56 = 687"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "13 × 4 = ?",
+     "answer": "52",
+     "value": 52,
+     "explanation": "13 × 4 = 52"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "296 ÷ 8 = ?",
+     "answer": "37",
+     "value": 37,
+     "explanation": "8 × 37 = 296이므로 296 ÷ 8 = 37"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "402 + 93 = ?",
+     "answer": "495",
+     "value": 495,
+     "explanation": "402 + 93 = 495"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "43 × 6 = ?",
+     "answer": "258",
+     "value": 258,
+     "explanation": "43 × 6 = 258"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "51 ÷ 3 = ?",
+     "answer": "17",
+     "value": 17,
+     "explanation": "3 × 17 = 51이므로 51 ÷ 3 = 17"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "430 − 71 = ?",
+     "answer": "359",
+     "value": 359,
+     "explanation": "430 − 71 = 359"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "42 × 8 = ?",
+     "answer": "336",
+     "value": 336,
+     "explanation": "42 × 8 = 336"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "176 ÷ 8 = ?",
+     "answer": "22",
+     "value": 22,
+     "explanation": "8 × 22 = 176이므로 176 ÷ 8 = 22"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "843 + 87 = ?",
+     "answer": "930",
+     "value": 930,
+     "explanation": "843 + 87 = 930"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "42 × 4 = ?",
+     "answer": "168",
+     "value": 168,
+     "explanation": "42 × 4 = 168"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "216 ÷ 6 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "6 × 36 = 216이므로 216 ÷ 6 = 36"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "806 − 42 = ?",
+     "answer": "764",
+     "value": 764,
+     "explanation": "806 − 42 = 764"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "46 × 4 = ?",
+     "answer": "184",
+     "value": 184,
+     "explanation": "46 × 4 = 184"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "200 ÷ 8 = ?",
+     "answer": "25",
+     "value": 25,
+     "explanation": "8 × 25 = 200이므로 200 ÷ 8 = 25"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "713 − 33 = ?",
+     "answer": "680",
+     "value": 680,
+     "explanation": "713 − 33 = 680"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "30 × 3 = ?",
+     "answer": "90",
+     "value": 90,
+     "explanation": "30 × 3 = 90"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "100 ÷ 5 = ?",
+     "answer": "20",
+     "value": 20,
+     "explanation": "5 × 20 = 100이므로 100 ÷ 5 = 20"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "754 + 91 = ?",
+     "answer": "845",
+     "value": 845,
+     "explanation": "754 + 91 = 845"
+    }
+   ]
+  },
+  {
+   "testId": "calc-medium-4",
+   "order": 9,
+   "title": "빠른 계산 · 보통 4",
+   "questionCount": 20,
+   "timeLimitSec": 120,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "35 × 3 = ?",
+     "answer": "105",
+     "value": 105,
+     "explanation": "35 × 3 = 105"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "180 ÷ 9 = ?",
+     "answer": "20",
+     "value": 20,
+     "explanation": "9 × 20 = 180이므로 180 ÷ 9 = 20"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "167 + 80 = ?",
+     "answer": "247",
+     "value": 247,
+     "explanation": "167 + 80 = 247"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "40 × 7 = ?",
+     "answer": "280",
+     "value": 280,
+     "explanation": "40 × 7 = 280"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "114 ÷ 3 = ?",
+     "answer": "38",
+     "value": 38,
+     "explanation": "3 × 38 = 114이므로 114 ÷ 3 = 38"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "758 − 39 = ?",
+     "answer": "719",
+     "value": 719,
+     "explanation": "758 − 39 = 719"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "20 × 3 = ?",
+     "answer": "60",
+     "value": 60,
+     "explanation": "20 × 3 = 60"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "195 ÷ 5 = ?",
+     "answer": "39",
+     "value": 39,
+     "explanation": "5 × 39 = 195이므로 195 ÷ 5 = 39"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "584 − 68 = ?",
+     "answer": "516",
+     "value": 516,
+     "explanation": "584 − 68 = 516"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "42 × 9 = ?",
+     "answer": "378",
+     "value": 378,
+     "explanation": "42 × 9 = 378"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "102 ÷ 3 = ?",
+     "answer": "34",
+     "value": 34,
+     "explanation": "3 × 34 = 102이므로 102 ÷ 3 = 34"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "687 + 69 = ?",
+     "answer": "756",
+     "value": 756,
+     "explanation": "687 + 69 = 756"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "37 × 3 = ?",
+     "answer": "111",
+     "value": 111,
+     "explanation": "37 × 3 = 111"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "108 ÷ 6 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "6 × 18 = 108이므로 108 ÷ 6 = 18"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "391 − 99 = ?",
+     "answer": "292",
+     "value": 292,
+     "explanation": "391 − 99 = 292"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "17 × 9 = ?",
+     "answer": "153",
+     "value": 153,
+     "explanation": "17 × 9 = 153"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "60 ÷ 4 = ?",
+     "answer": "15",
+     "value": 15,
+     "explanation": "4 × 15 = 60이므로 60 ÷ 4 = 15"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "233 + 59 = ?",
+     "answer": "292",
+     "value": 292,
+     "explanation": "233 + 59 = 292"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "15 × 5 = ?",
+     "answer": "75",
+     "value": 75,
+     "explanation": "15 × 5 = 75"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "170 ÷ 5 = ?",
+     "answer": "34",
+     "value": 34,
+     "explanation": "5 × 34 = 170이므로 170 ÷ 5 = 34"
+    }
+   ]
+  },
+  {
+   "testId": "calc-medium-5",
+   "order": 10,
+   "title": "빠른 계산 · 보통 5",
+   "questionCount": 20,
+   "timeLimitSec": 120,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "858 + 93 = ?",
+     "answer": "951",
+     "value": 951,
+     "explanation": "858 + 93 = 951"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "41 × 8 = ?",
+     "answer": "328",
+     "value": 328,
+     "explanation": "41 × 8 = 328"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "180 ÷ 5 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "5 × 36 = 180이므로 180 ÷ 5 = 36"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "438 − 56 = ?",
+     "answer": "382",
+     "value": 382,
+     "explanation": "438 − 56 = 382"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "27 × 5 = ?",
+     "answer": "135",
+     "value": 135,
+     "explanation": "27 × 5 = 135"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "84 ÷ 4 = ?",
+     "answer": "21",
+     "value": 21,
+     "explanation": "4 × 21 = 84이므로 84 ÷ 4 = 21"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "675 + 50 = ?",
+     "answer": "725",
+     "value": 725,
+     "explanation": "675 + 50 = 725"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "25 × 7 = ?",
+     "answer": "175",
+     "value": 175,
+     "explanation": "25 × 7 = 175"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "64 ÷ 4 = ?",
+     "answer": "16",
+     "value": 16,
+     "explanation": "4 × 16 = 64이므로 64 ÷ 4 = 16"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "571 + 50 = ?",
+     "answer": "621",
+     "value": 621,
+     "explanation": "571 + 50 = 621"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "32 × 3 = ?",
+     "answer": "96",
+     "value": 96,
+     "explanation": "32 × 3 = 96"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "198 ÷ 6 = ?",
+     "answer": "33",
+     "value": 33,
+     "explanation": "6 × 33 = 198이므로 198 ÷ 6 = 33"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "830 + 84 = ?",
+     "answer": "914",
+     "value": 914,
+     "explanation": "830 + 84 = 914"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "30 × 9 = ?",
+     "answer": "270",
+     "value": 270,
+     "explanation": "30 × 9 = 270"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "108 ÷ 4 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "4 × 27 = 108이므로 108 ÷ 4 = 27"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "368 − 72 = ?",
+     "answer": "296",
+     "value": 296,
+     "explanation": "368 − 72 = 296"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "16 × 8 = ?",
+     "answer": "128",
+     "value": 128,
+     "explanation": "16 × 8 = 128"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "259 ÷ 7 = ?",
+     "answer": "37",
+     "value": 37,
+     "explanation": "7 × 37 = 259이므로 259 ÷ 7 = 37"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "714 − 81 = ?",
+     "answer": "633",
+     "value": 633,
+     "explanation": "714 − 81 = 633"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "36 × 9 = ?",
+     "answer": "324",
+     "value": 324,
+     "explanation": "36 × 9 = 324"
+    }
+   ]
+  },
+  {
+   "testId": "calc-hard",
+   "order": 11,
+   "title": "빠른 계산 · 어려움 1",
+   "questionCount": 20,
+   "timeLimitSec": 180,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "28 + 9 × 8 = ?",
+     "answer": "100",
+     "value": 100,
+     "explanation": "곱셈 먼저: 9 × 8 = 72, 28 + 72 = 100"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "(39 − 22) × 4 = ?",
+     "answer": "68",
+     "value": 68,
+     "explanation": "괄호 먼저: 39 − 22 = 17, 17 × 4 = 68"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "180 ÷ 12 + 34 = ?",
+     "answer": "49",
+     "value": 49,
+     "explanation": "나눗셈 먼저: 180 ÷ 12 = 15, 15 + 34 = 49"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "9 × 7 − 6 × 5 = ?",
+     "answer": "33",
+     "value": 33,
+     "explanation": "곱셈 먼저: 9 × 7 = 63, 6 × 5 = 30, 63 − 30 = 33"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "26 + 3 × 9 = ?",
+     "answer": "53",
+     "value": 53,
+     "explanation": "곱셈 먼저: 3 × 9 = 27, 26 + 27 = 53"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "(27 − 17) × 4 = ?",
+     "answer": "40",
+     "value": 40,
+     "explanation": "괄호 먼저: 27 − 17 = 10, 10 × 4 = 40"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "96 ÷ 8 + 15 = ?",
+     "answer": "27",
+     "value": 27,
+     "explanation": "나눗셈 먼저: 96 ÷ 8 = 12, 12 + 15 = 27"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "11 × 12 − 2 × 7 = ?",
+     "answer": "118",
+     "value": 118,
+     "explanation": "곱셈 먼저: 11 × 12 = 132, 2 × 7 = 14, 132 − 14 = 118"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "28 + 6 × 9 = ?",
+     "answer": "82",
+     "value": 82,
+     "explanation": "곱셈 먼저: 6 × 9 = 54, 28 + 54 = 82"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "(45 − 35) × 3 = ?",
+     "answer": "30",
+     "value": 30,
+     "explanation": "괄호 먼저: 45 − 35 = 10, 10 × 3 = 30"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "77 ÷ 7 + 19 = ?",
+     "answer": "30",
+     "value": 30,
+     "explanation": "나눗셈 먼저: 77 ÷ 7 = 11, 11 + 19 = 30"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "10 × 12 − 3 × 6 = ?",
+     "answer": "102",
+     "value": 102,
+     "explanation": "곱셈 먼저: 10 × 12 = 120, 3 × 6 = 18, 120 − 18 = 102"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "11 + 3 × 8 = ?",
+     "answer": "35",
+     "value": 35,
+     "explanation": "곱셈 먼저: 3 × 8 = 24, 11 + 24 = 35"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "(49 − 13) × 3 = ?",
+     "answer": "108",
+     "value": 108,
+     "explanation": "괄호 먼저: 49 − 13 = 36, 36 × 3 = 108"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "63 ÷ 7 + 40 = ?",
+     "answer": "49",
+     "value": 49,
+     "explanation": "나눗셈 먼저: 63 ÷ 7 = 9, 9 + 40 = 49"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "7 × 10 − 4 × 2 = ?",
+     "answer": "62",
+     "value": 62,
+     "explanation": "곱셈 먼저: 7 × 10 = 70, 4 × 2 = 8, 70 − 8 = 62"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "49 + 7 × 4 = ?",
+     "answer": "77",
+     "value": 77,
+     "explanation": "곱셈 먼저: 7 × 4 = 28, 49 + 28 = 77"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "(40 − 25) × 7 = ?",
+     "answer": "105",
+     "value": 105,
+     "explanation": "괄호 먼저: 40 − 25 = 15, 15 × 7 = 105"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "48 ÷ 6 + 54 = ?",
+     "answer": "62",
+     "value": 62,
+     "explanation": "나눗셈 먼저: 48 ÷ 6 = 8, 8 + 54 = 62"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "6 × 8 − 4 × 2 = ?",
+     "answer": "40",
+     "value": 40,
+     "explanation": "곱셈 먼저: 6 × 8 = 48, 4 × 2 = 8, 48 − 8 = 40"
+    }
+   ]
+  },
+  {
+   "testId": "calc-hard-2",
+   "order": 12,
+   "title": "빠른 계산 · 어려움 2",
+   "questionCount": 20,
+   "timeLimitSec": 180,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "26 + 8 × 3 = ?",
+     "answer": "50",
+     "value": 50,
+     "explanation": "곱셈 먼저: 8 × 3 = 24, 26 + 24 = 50"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "(38 − 28) × 7 = ?",
+     "answer": "70",
+     "value": 70,
+     "explanation": "괄호 먼저: 38 − 28 = 10, 10 × 7 = 70"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "112 ÷ 8 + 45 = ?",
+     "answer": "59",
+     "value": 59,
+     "explanation": "나눗셈 먼저: 112 ÷ 8 = 14, 14 + 45 = 59"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "11 × 10 − 4 × 4 = ?",
+     "answer": "94",
+     "value": 94,
+     "explanation": "곱셈 먼저: 11 × 10 = 110, 4 × 4 = 16, 110 − 16 = 94"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "41 + 7 × 4 = ?",
+     "answer": "69",
+     "value": 69,
+     "explanation": "곱셈 먼저: 7 × 4 = 28, 41 + 28 = 69"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "(52 − 33) × 5 = ?",
+     "answer": "95",
+     "value": 95,
+     "explanation": "괄호 먼저: 52 − 33 = 19, 19 × 5 = 95"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "132 ÷ 12 + 54 = ?",
+     "answer": "65",
+     "value": 65,
+     "explanation": "나눗셈 먼저: 132 ÷ 12 = 11, 11 + 54 = 65"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "7 × 6 − 7 × 4 = ?",
+     "answer": "14",
+     "value": 14,
+     "explanation": "곱셈 먼저: 7 × 6 = 42, 7 × 4 = 28, 42 − 28 = 14"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "20 + 8 × 8 = ?",
+     "answer": "84",
+     "value": 84,
+     "explanation": "곱셈 먼저: 8 × 8 = 64, 20 + 64 = 84"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "(65 − 51) × 4 = ?",
+     "answer": "56",
+     "value": 56,
+     "explanation": "괄호 먼저: 65 − 51 = 14, 14 × 4 = 56"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "40 ÷ 4 + 46 = ?",
+     "answer": "56",
+     "value": 56,
+     "explanation": "나눗셈 먼저: 40 ÷ 4 = 10, 10 + 46 = 56"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "6 × 7 − 7 × 4 = ?",
+     "answer": "14",
+     "value": 14,
+     "explanation": "곱셈 먼저: 6 × 7 = 42, 7 × 4 = 28, 42 − 28 = 14"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "18 + 6 × 8 = ?",
+     "answer": "66",
+     "value": 66,
+     "explanation": "곱셈 먼저: 6 × 8 = 48, 18 + 48 = 66"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "(61 − 13) × 5 = ?",
+     "answer": "240",
+     "value": 240,
+     "explanation": "괄호 먼저: 61 − 13 = 48, 48 × 5 = 240"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "32 ÷ 4 + 17 = ?",
+     "answer": "25",
+     "value": 25,
+     "explanation": "나눗셈 먼저: 32 ÷ 4 = 8, 8 + 17 = 25"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "10 × 8 − 6 × 3 = ?",
+     "answer": "62",
+     "value": 62,
+     "explanation": "곱셈 먼저: 10 × 8 = 80, 6 × 3 = 18, 80 − 18 = 62"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "41 + 8 × 6 = ?",
+     "answer": "89",
+     "value": 89,
+     "explanation": "곱셈 먼저: 8 × 6 = 48, 41 + 48 = 89"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "(32 − 24) × 3 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "괄호 먼저: 32 − 24 = 8, 8 × 3 = 24"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "91 ÷ 7 + 38 = ?",
+     "answer": "51",
+     "value": 51,
+     "explanation": "나눗셈 먼저: 91 ÷ 7 = 13, 13 + 38 = 51"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "6 × 9 − 5 × 7 = ?",
+     "answer": "19",
+     "value": 19,
+     "explanation": "곱셈 먼저: 6 × 9 = 54, 5 × 7 = 35, 54 − 35 = 19"
+    }
+   ]
+  },
+  {
+   "testId": "calc-hard-3",
+   "order": 13,
+   "title": "빠른 계산 · 어려움 3",
+   "questionCount": 20,
+   "timeLimitSec": 180,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "47 + 5 × 4 = ?",
+     "answer": "67",
+     "value": 67,
+     "explanation": "곱셈 먼저: 5 × 4 = 20, 47 + 20 = 67"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "(62 − 50) × 3 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "괄호 먼저: 62 − 50 = 12, 12 × 3 = 36"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "72 ÷ 9 + 51 = ?",
+     "answer": "59",
+     "value": 59,
+     "explanation": "나눗셈 먼저: 72 ÷ 9 = 8, 8 + 51 = 59"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "6 × 8 − 4 × 6 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "곱셈 먼저: 6 × 8 = 48, 4 × 6 = 24, 48 − 24 = 24"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "36 + 3 × 3 = ?",
+     "answer": "45",
+     "value": 45,
+     "explanation": "곱셈 먼저: 3 × 3 = 9, 36 + 9 = 45"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "(27 − 18) × 5 = ?",
+     "answer": "45",
+     "value": 45,
+     "explanation": "괄호 먼저: 27 − 18 = 9, 9 × 5 = 45"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "70 ÷ 5 + 26 = ?",
+     "answer": "40",
+     "value": 40,
+     "explanation": "나눗셈 먼저: 70 ÷ 5 = 14, 14 + 26 = 40"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "12 × 7 − 3 × 2 = ?",
+     "answer": "78",
+     "value": 78,
+     "explanation": "곱셈 먼저: 12 × 7 = 84, 3 × 2 = 6, 84 − 6 = 78"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "27 + 4 × 3 = ?",
+     "answer": "39",
+     "value": 39,
+     "explanation": "곱셈 먼저: 4 × 3 = 12, 27 + 12 = 39"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "(65 − 35) × 6 = ?",
+     "answer": "180",
+     "value": 180,
+     "explanation": "괄호 먼저: 65 − 35 = 30, 30 × 6 = 180"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "64 ÷ 8 + 50 = ?",
+     "answer": "58",
+     "value": 58,
+     "explanation": "나눗셈 먼저: 64 ÷ 8 = 8, 8 + 50 = 58"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "10 × 8 − 7 × 8 = ?",
+     "answer": "24",
+     "value": 24,
+     "explanation": "곱셈 먼저: 10 × 8 = 80, 7 × 8 = 56, 80 − 56 = 24"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "19 + 9 × 6 = ?",
+     "answer": "73",
+     "value": 73,
+     "explanation": "곱셈 먼저: 9 × 6 = 54, 19 + 54 = 73"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "(55 − 32) × 6 = ?",
+     "answer": "138",
+     "value": 138,
+     "explanation": "괄호 먼저: 55 − 32 = 23, 23 × 6 = 138"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "110 ÷ 11 + 13 = ?",
+     "answer": "23",
+     "value": 23,
+     "explanation": "나눗셈 먼저: 110 ÷ 11 = 10, 10 + 13 = 23"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "6 × 6 − 5 × 2 = ?",
+     "answer": "26",
+     "value": 26,
+     "explanation": "곱셈 먼저: 6 × 6 = 36, 5 × 2 = 10, 36 − 10 = 26"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "34 + 5 × 8 = ?",
+     "answer": "74",
+     "value": 74,
+     "explanation": "곱셈 먼저: 5 × 8 = 40, 34 + 40 = 74"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "(28 − 16) × 6 = ?",
+     "answer": "72",
+     "value": 72,
+     "explanation": "괄호 먼저: 28 − 16 = 12, 12 × 6 = 72"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "112 ÷ 8 + 51 = ?",
+     "answer": "65",
+     "value": 65,
+     "explanation": "나눗셈 먼저: 112 ÷ 8 = 14, 14 + 51 = 65"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "12 × 10 − 6 × 6 = ?",
+     "answer": "84",
+     "value": 84,
+     "explanation": "곱셈 먼저: 12 × 10 = 120, 6 × 6 = 36, 120 − 36 = 84"
+    }
+   ]
+  },
+  {
+   "testId": "calc-hard-4",
+   "order": 14,
+   "title": "빠른 계산 · 어려움 4",
+   "questionCount": 20,
+   "timeLimitSec": 180,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "14 + 8 × 6 = ?",
+     "answer": "62",
+     "value": 62,
+     "explanation": "곱셈 먼저: 8 × 6 = 48, 14 + 48 = 62"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "(50 − 11) × 8 = ?",
+     "answer": "312",
+     "value": 312,
+     "explanation": "괄호 먼저: 50 − 11 = 39, 39 × 8 = 312"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "84 ÷ 7 + 20 = ?",
+     "answer": "32",
+     "value": 32,
+     "explanation": "나눗셈 먼저: 84 ÷ 7 = 12, 12 + 20 = 32"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "12 × 8 − 5 × 3 = ?",
+     "answer": "81",
+     "value": 81,
+     "explanation": "곱셈 먼저: 12 × 8 = 96, 5 × 3 = 15, 96 − 15 = 81"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "45 + 5 × 6 = ?",
+     "answer": "75",
+     "value": 75,
+     "explanation": "곱셈 먼저: 5 × 6 = 30, 45 + 30 = 75"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "(69 − 26) × 8 = ?",
+     "answer": "344",
+     "value": 344,
+     "explanation": "괄호 먼저: 69 − 26 = 43, 43 × 8 = 344"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "120 ÷ 8 + 13 = ?",
+     "answer": "28",
+     "value": 28,
+     "explanation": "나눗셈 먼저: 120 ÷ 8 = 15, 15 + 13 = 28"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "11 × 6 − 6 × 8 = ?",
+     "answer": "18",
+     "value": 18,
+     "explanation": "곱셈 먼저: 11 × 6 = 66, 6 × 8 = 48, 66 − 48 = 18"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "47 + 8 × 5 = ?",
+     "answer": "87",
+     "value": 87,
+     "explanation": "곱셈 먼저: 8 × 5 = 40, 47 + 40 = 87"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "(28 − 17) × 6 = ?",
+     "answer": "66",
+     "value": 66,
+     "explanation": "괄호 먼저: 28 − 17 = 11, 11 × 6 = 66"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "110 ÷ 11 + 46 = ?",
+     "answer": "56",
+     "value": 56,
+     "explanation": "나눗셈 먼저: 110 ÷ 11 = 10, 10 + 46 = 56"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "7 × 8 − 5 × 7 = ?",
+     "answer": "21",
+     "value": 21,
+     "explanation": "곱셈 먼저: 7 × 8 = 56, 5 × 7 = 35, 56 − 35 = 21"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "28 + 7 × 5 = ?",
+     "answer": "63",
+     "value": 63,
+     "explanation": "곱셈 먼저: 7 × 5 = 35, 28 + 35 = 63"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "(48 − 31) × 3 = ?",
+     "answer": "51",
+     "value": 51,
+     "explanation": "괄호 먼저: 48 − 31 = 17, 17 × 3 = 51"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "40 ÷ 4 + 26 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "나눗셈 먼저: 40 ÷ 4 = 10, 10 + 26 = 36"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "6 × 8 − 6 × 2 = ?",
+     "answer": "36",
+     "value": 36,
+     "explanation": "곱셈 먼저: 6 × 8 = 48, 6 × 2 = 12, 48 − 12 = 36"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "46 + 5 × 6 = ?",
+     "answer": "76",
+     "value": 76,
+     "explanation": "곱셈 먼저: 5 × 6 = 30, 46 + 30 = 76"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "(34 − 23) × 7 = ?",
+     "answer": "77",
+     "value": 77,
+     "explanation": "괄호 먼저: 34 − 23 = 11, 11 × 7 = 77"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "84 ÷ 6 + 43 = ?",
+     "answer": "57",
+     "value": 57,
+     "explanation": "나눗셈 먼저: 84 ÷ 6 = 14, 14 + 43 = 57"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "7 × 6 − 5 × 4 = ?",
+     "answer": "22",
+     "value": 22,
+     "explanation": "곱셈 먼저: 7 × 6 = 42, 5 × 4 = 20, 42 − 20 = 22"
+    }
+   ]
+  },
+  {
+   "testId": "calc-hard-5",
+   "order": 15,
+   "title": "빠른 계산 · 어려움 5",
+   "questionCount": 20,
+   "timeLimitSec": 180,
+   "questions": [
+    {
+     "n": 1,
+     "type": "number",
+     "prompt": "49 + 8 × 3 = ?",
+     "answer": "73",
+     "value": 73,
+     "explanation": "곱셈 먼저: 8 × 3 = 24, 49 + 24 = 73"
+    },
+    {
+     "n": 2,
+     "type": "number",
+     "prompt": "(58 − 19) × 8 = ?",
+     "answer": "312",
+     "value": 312,
+     "explanation": "괄호 먼저: 58 − 19 = 39, 39 × 8 = 312"
+    },
+    {
+     "n": 3,
+     "type": "number",
+     "prompt": "42 ÷ 6 + 59 = ?",
+     "answer": "66",
+     "value": 66,
+     "explanation": "나눗셈 먼저: 42 ÷ 6 = 7, 7 + 59 = 66"
+    },
+    {
+     "n": 4,
+     "type": "number",
+     "prompt": "10 × 7 − 7 × 4 = ?",
+     "answer": "42",
+     "value": 42,
+     "explanation": "곱셈 먼저: 10 × 7 = 70, 7 × 4 = 28, 70 − 28 = 42"
+    },
+    {
+     "n": 5,
+     "type": "number",
+     "prompt": "49 + 5 × 9 = ?",
+     "answer": "94",
+     "value": 94,
+     "explanation": "곱셈 먼저: 5 × 9 = 45, 49 + 45 = 94"
+    },
+    {
+     "n": 6,
+     "type": "number",
+     "prompt": "(45 − 37) × 4 = ?",
+     "answer": "32",
+     "value": 32,
+     "explanation": "괄호 먼저: 45 − 37 = 8, 8 × 4 = 32"
+    },
+    {
+     "n": 7,
+     "type": "number",
+     "prompt": "32 ÷ 4 + 39 = ?",
+     "answer": "47",
+     "value": 47,
+     "explanation": "나눗셈 먼저: 32 ÷ 4 = 8, 8 + 39 = 47"
+    },
+    {
+     "n": 8,
+     "type": "number",
+     "prompt": "7 × 10 − 5 × 9 = ?",
+     "answer": "25",
+     "value": 25,
+     "explanation": "곱셈 먼저: 7 × 10 = 70, 5 × 9 = 45, 70 − 45 = 25"
+    },
+    {
+     "n": 9,
+     "type": "number",
+     "prompt": "25 + 9 × 4 = ?",
+     "answer": "61",
+     "value": 61,
+     "explanation": "곱셈 먼저: 9 × 4 = 36, 25 + 36 = 61"
+    },
+    {
+     "n": 10,
+     "type": "number",
+     "prompt": "(60 − 52) × 5 = ?",
+     "answer": "40",
+     "value": 40,
+     "explanation": "괄호 먼저: 60 − 52 = 8, 8 × 5 = 40"
+    },
+    {
+     "n": 11,
+     "type": "number",
+     "prompt": "105 ÷ 7 + 16 = ?",
+     "answer": "31",
+     "value": 31,
+     "explanation": "나눗셈 먼저: 105 ÷ 7 = 15, 15 + 16 = 31"
+    },
+    {
+     "n": 12,
+     "type": "number",
+     "prompt": "10 × 11 − 3 × 3 = ?",
+     "answer": "101",
+     "value": 101,
+     "explanation": "곱셈 먼저: 10 × 11 = 110, 3 × 3 = 9, 110 − 9 = 101"
+    },
+    {
+     "n": 13,
+     "type": "number",
+     "prompt": "34 + 6 × 7 = ?",
+     "answer": "76",
+     "value": 76,
+     "explanation": "곱셈 먼저: 6 × 7 = 42, 34 + 42 = 76"
+    },
+    {
+     "n": 14,
+     "type": "number",
+     "prompt": "(42 − 13) × 4 = ?",
+     "answer": "116",
+     "value": 116,
+     "explanation": "괄호 먼저: 42 − 13 = 29, 29 × 4 = 116"
+    },
+    {
+     "n": 15,
+     "type": "number",
+     "prompt": "121 ÷ 11 + 49 = ?",
+     "answer": "60",
+     "value": 60,
+     "explanation": "나눗셈 먼저: 121 ÷ 11 = 11, 11 + 49 = 60"
+    },
+    {
+     "n": 16,
+     "type": "number",
+     "prompt": "12 × 12 − 6 × 3 = ?",
+     "answer": "126",
+     "value": 126,
+     "explanation": "곱셈 먼저: 12 × 12 = 144, 6 × 3 = 18, 144 − 18 = 126"
+    },
+    {
+     "n": 17,
+     "type": "number",
+     "prompt": "37 + 6 × 3 = ?",
+     "answer": "55",
+     "value": 55,
+     "explanation": "곱셈 먼저: 6 × 3 = 18, 37 + 18 = 55"
+    },
+    {
+     "n": 18,
+     "type": "number",
+     "prompt": "(43 − 12) × 6 = ?",
+     "answer": "186",
+     "value": 186,
+     "explanation": "괄호 먼저: 43 − 12 = 31, 31 × 6 = 186"
+    },
+    {
+     "n": 19,
+     "type": "number",
+     "prompt": "35 ÷ 5 + 40 = ?",
+     "answer": "47",
+     "value": 47,
+     "explanation": "나눗셈 먼저: 35 ÷ 5 = 7, 7 + 40 = 47"
+    },
+    {
+     "n": 20,
+     "type": "number",
+     "prompt": "12 × 7 − 4 × 4 = ?",
+     "answer": "68",
+     "value": 68,
+     "explanation": "곱셈 먼저: 12 × 7 = 84, 4 × 4 = 16, 84 − 16 = 68"
+    }
+   ]
+  }
+ ]
+}

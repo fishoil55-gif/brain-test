@@ -1,0 +1,64 @@
+{
+ "packs": [
+  {
+   "path": "public/selfcheck.json",
+   "rank": 2,
+   "scoringModel": "profile",
+   "title": "자기 점검"
+  },
+  {
+   "path": "public/ideas.json",
+   "rank": 4,
+   "scoringModel": "freeform",
+   "title": "생각 넓히기"
+  },
+  {
+   "path": "public/sequence.json",
+   "rank": 6,
+   "scoringModel": "correct",
+   "title": "수열 연습"
+  },
+  {
+   "path": "public/matrix.json",
+   "rank": 7,
+   "scoringModel": "correct",
+   "title": "행렬 추론"
+  },
+  {
+   "path": "public/arith.json",
+   "rank": 8,
+   "scoringModel": "correct",
+   "title": "빠른 계산"
+  },
+  {
+   "path": "public/anagram.json",
+   "rank": 9,
+   "scoringModel": "correct",
+   "title": "낱말 만들기"
+  },
+  {
+   "path": "public/rotation.json",
+   "rank": 10,
+   "scoringModel": "correct",
+   "title": "도형 회전"
+  },
+  {
+   "path": "public/analogy.json",
+   "rank": 11,
+   "scoringModel": "correct",
+   "title": "낱말 유추"
+  },
+  {
+   "path": "public/logic.json",
+   "rank": 12,
+   "scoringModel": "correct",
+   "title": "순서 추리"
+  },
+  {
+   "path": "public/memory.json",
+   "rank": 13,
+   "scoringModel": "correct",
+   "title": "숫자 기억"
+  }
+ ]
+}

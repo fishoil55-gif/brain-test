@@ -1,0 +1,1 @@
+function c(r,t,n,o){return r.reduce((e,s)=>e+s,0)+Math.max(0,(t??o)-n)}function u(r){const t=Math.round(r/1e3),n=Math.floor(t/60),o=t%60;return n===0?`${o}초`:o===0?`${n}분`:`${n}분 ${o}초`}export{u as f,c as s};

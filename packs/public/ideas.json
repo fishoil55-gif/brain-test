@@ -1,0 +1,79 @@
+{
+ "packId": "ideas",
+ "schemaVersion": 1,
+ "title": "생각 넓히기",
+ "locale": "ko-KR",
+ "visibility": "public",
+ "scoringModel": "freeform",
+ "intro": "정답도 채점도 없는 과제입니다. 떠오르는 대로 적고, 지난번의 나와 비교해 보세요. 기록은 이 기기에만 남습니다.",
+ "provenance": {
+  "kind": "authored",
+  "source": "자체 작성 (scripts/build-authored.mjs)"
+ },
+ "tests": [
+  {
+   "testId": "ideas-list",
+   "order": 1,
+   "title": "떠올리기",
+   "intro": "3분 동안 한 줄에 하나씩 적으세요. 엉뚱할수록 좋습니다.",
+   "tasks": [
+    {
+     "id": "cup",
+     "kind": "ideas",
+     "timeLimitSec": 180,
+     "prompt": "종이컵을 컵 말고 어디에 쓸 수 있을까요?"
+    },
+    {
+     "id": "umbrella",
+     "kind": "ideas",
+     "timeLimitSec": 180,
+     "prompt": "우산을 비를 막는 것 말고 어디에 쓸 수 있을까요?"
+    },
+    {
+     "id": "round",
+     "kind": "ideas",
+     "timeLimitSec": 180,
+     "prompt": "둥근 것을 떠오르는 대로 적으세요."
+    },
+    {
+     "id": "nosleep",
+     "kind": "ideas",
+     "timeLimitSec": 180,
+     "prompt": "사람이 잠을 자지 않아도 된다면 세상에 무엇이 달라질까요?"
+    },
+    {
+     "id": "common",
+     "kind": "ideas",
+     "timeLimitSec": 180,
+     "prompt": "\"바다\"와 \"도서관\"의 공통점을 찾아 적으세요."
+    }
+   ]
+  },
+  {
+   "testId": "ideas-write",
+   "order": 2,
+   "title": "짧은 글쓰기",
+   "intro": "목표 낱말 수를 넘기면 충분합니다. 잘 쓰려고 하기보다 멈추지 않고 쓰는 것이 목표입니다.",
+   "tasks": [
+    {
+     "id": "describe",
+     "kind": "writing",
+     "targetWords": 60,
+     "prompt": "지금 눈앞에 있는 물건 하나를 골라, 그 물건을 한 번도 본 적 없는 사람에게 설명하듯 적어 보세요."
+    },
+    {
+     "id": "blue-room",
+     "kind": "writing",
+     "targetWords": 80,
+     "prompt": "\"문을 열자 방 안이 온통 파란색이었다.\"로 시작하는 짧은 이야기를 쓰세요."
+    },
+    {
+     "id": "backwards",
+     "kind": "writing",
+     "targetWords": 50,
+     "prompt": "오늘 있었던 일을 거꾸로, 가장 마지막 일부터 처음 일까지 적어 보세요."
+    }
+   ]
+  }
+ ]
+}

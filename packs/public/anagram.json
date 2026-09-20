@@ -1,0 +1,3135 @@
+{
+ "packId": "gen-anagram",
+ "schemaVersion": 1,
+ "title": "낱말 만들기",
+ "locale": "ko-KR",
+ "visibility": "public",
+ "scoringModel": "correct",
+ "intro": "뒤섞인 글자를 다시 배열해 낱말을 만드는 문제입니다. 낱말은 직접 만든 일상 낱말 목록에서 골랐고, 같은 글자로 목록의 다른 낱말이 만들어지는 경우는 뺐습니다.",
+ "provenance": {
+  "kind": "generated",
+  "source": "자체 생성기 engine/generators/anagram.ts, 자체 낱말 목록 (시드 2029)"
+ },
+ "tests": [
+  {
+   "testId": "ana-easy",
+   "order": 1,
+   "title": "낱말 만들기 · 쉬움 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n술 · 미 · 실\n힌트: 장소",
+     "answer": "미술실",
+     "accepted": [
+      "미술실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n컴 · 터 · 퓨\n힌트: 물건",
+     "answer": "컴퓨터",
+     "accepted": [
+      "컴퓨터"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n도 · 계 · 온\n힌트: 물건",
+     "answer": "온도계",
+     "accepted": [
+      "온도계"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n울 · 방 · 솔\n힌트: 자연",
+     "answer": "솔방울",
+     "accepted": [
+      "솔방울"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n점 · 화 · 백\n힌트: 장소",
+     "answer": "백화점",
+     "accepted": [
+      "백화점"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n산 · 기 · 계\n힌트: 물건",
+     "answer": "계산기",
+     "accepted": [
+      "계산기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 옷 · 걸\n힌트: 물건",
+     "answer": "옷걸이",
+     "accepted": [
+      "옷걸이"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n무 · 새 · 앵\n힌트: 동물",
+     "answer": "앵무새",
+     "accepted": [
+      "앵무새"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n반 · 나 · 침\n힌트: 물건",
+     "answer": "나침반",
+     "accepted": [
+      "나침반"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n등 · 손 · 전\n힌트: 물건",
+     "answer": "손전등",
+     "accepted": [
+      "손전등"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n루 · 거 · 캥\n힌트: 동물",
+     "answer": "캥거루",
+     "accepted": [
+      "캥거루"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n민 · 레 · 들\n힌트: 자연",
+     "answer": "민들레",
+     "accepted": [
+      "민들레"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n락 · 시 · 도\n힌트: 물건",
+     "answer": "도시락",
+     "accepted": [
+      "도시락"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n도 · 실 · 서\n힌트: 장소",
+     "answer": "도서실",
+     "accepted": [
+      "도서실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n무 · 교 · 실\n힌트: 장소",
+     "answer": "교무실",
+     "accepted": [
+      "교무실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n병 · 보 · 온\n힌트: 물건",
+     "answer": "보온병",
+     "accepted": [
+      "보온병"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 마 · 크\n힌트: 물건",
+     "answer": "마이크",
+     "accepted": [
+      "마이크"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n아 · 숭 · 봉\n힌트: 자연",
+     "answer": "봉숭아",
+     "accepted": [
+      "봉숭아"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n탕 · 자 · 감\n힌트: 음식",
+     "answer": "감자탕",
+     "accepted": [
+      "감자탕"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 점 · 문\n힌트: 장소",
+     "answer": "문구점",
+     "accepted": [
+      "문구점"
+     ],
+     "explanation": "분류: 장소"
+    }
+   ]
+  },
+  {
+   "testId": "ana-easy-2",
+   "order": 2,
+   "title": "낱말 만들기 · 쉬움 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n작 · 가 · 곡\n힌트: 직업",
+     "answer": "작곡가",
+     "accepted": [
+      "작곡가"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n용 · 미 · 사\n힌트: 직업",
+     "answer": "미용사",
+     "accepted": [
+      "미용사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 판 · 출\n힌트: 장소",
+     "answer": "출판사",
+     "accepted": [
+      "출판사"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n술 · 관 · 미\n힌트: 장소",
+     "answer": "미술관",
+     "accepted": [
+      "미술관"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n축 · 가 · 건\n힌트: 직업",
+     "answer": "건축가",
+     "accepted": [
+      "건축가"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n비 · 밥 · 빔\n힌트: 음식",
+     "answer": "비빔밥",
+     "accepted": [
+      "비빔밥"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n지 · 통 · 휴\n힌트: 물건",
+     "answer": "휴지통",
+     "accepted": [
+      "휴지통"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n무 · 개 · 지\n힌트: 자연",
+     "answer": "무지개",
+     "accepted": [
+      "무지개"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n행 · 선 · 비\n힌트: 물건",
+     "answer": "비행선",
+     "accepted": [
+      "비행선"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n노 · 방 · 래\n힌트: 장소",
+     "answer": "노래방",
+     "accepted": [
+      "노래방"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n실 · 악 · 음\n힌트: 장소",
+     "answer": "음악실",
+     "accepted": [
+      "음악실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n차 · 장 · 주\n힌트: 장소",
+     "answer": "주차장",
+     "accepted": [
+      "주차장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n관 · 족 · 수\n힌트: 장소",
+     "answer": "수족관",
+     "accepted": [
+      "수족관"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n나 · 꽃 · 팔\n힌트: 자연",
+     "answer": "나팔꽃",
+     "accepted": [
+      "나팔꽃"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n래 · 진 · 달\n힌트: 자연",
+     "answer": "진달래",
+     "accepted": [
+      "진달래"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n역 · 통 · 사\n힌트: 직업",
+     "answer": "통역사",
+     "accepted": [
+      "통역사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 가 · 업\n힌트: 직업",
+     "answer": "사업가",
+     "accepted": [
+      "사업가"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n실 · 건 · 보\n힌트: 장소",
+     "answer": "보건실",
+     "accepted": [
+      "보건실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 차 · 방\n힌트: 물건",
+     "answer": "소방차",
+     "accepted": [
+      "소방차"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n급 · 구 · 차\n힌트: 물건",
+     "answer": "구급차",
+     "accepted": [
+      "구급차"
+     ],
+     "explanation": "분류: 물건"
+    }
+   ]
+  },
+  {
+   "testId": "ana-easy-3",
+   "order": 3,
+   "title": "낱말 만들기 · 쉬움 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 습 · 제\n힌트: 물건",
+     "answer": "제습기",
+     "accepted": [
+      "제습기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n링 · 레 · 슬\n힌트: 운동·놀이",
+     "answer": "레슬링",
+     "accepted": [
+      "레슬링"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n숟 · 락 · 가\n힌트: 물건",
+     "answer": "숟가락",
+     "accepted": [
+      "숟가락"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n도 · 리 · 목\n힌트: 물건",
+     "answer": "목도리",
+     "accepted": [
+      "목도리"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n보 · 드 · 키\n힌트: 물건",
+     "answer": "키보드",
+     "accepted": [
+      "키보드"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 굴 · 착\n힌트: 물건",
+     "answer": "굴착기",
+     "accepted": [
+      "굴착기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n블 · 텀 · 러\n힌트: 물건",
+     "answer": "텀블러",
+     "accepted": [
+      "텀블러"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n체 · 국 · 우\n힌트: 장소",
+     "answer": "우체국",
+     "accepted": [
+      "우체국"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n탕 · 목 · 욕\n힌트: 장소",
+     "answer": "목욕탕",
+     "accepted": [
+      "목욕탕"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n전 · 주 · 자\n힌트: 물건",
+     "answer": "주전자",
+     "accepted": [
+      "주전자"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 호 · 변\n힌트: 직업",
+     "answer": "변호사",
+     "accepted": [
+      "변호사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n경 · 장 · 기\n힌트: 장소",
+     "answer": "경기장",
+     "accepted": [
+      "경기장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n늘 · 하 · 밤\n힌트: 자연",
+     "answer": "밤하늘",
+     "accepted": [
+      "밤하늘"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n쥐 · 다 · 람\n힌트: 동물",
+     "answer": "다람쥐",
+     "accepted": [
+      "다람쥐"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n실 · 용 · 미\n힌트: 장소",
+     "answer": "미용실",
+     "accepted": [
+      "미용실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n관 · 방 · 소\n힌트: 직업",
+     "answer": "소방관",
+     "accepted": [
+      "소방관"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n더 · 위 · 무\n힌트: 자연",
+     "answer": "무더위",
+     "accepted": [
+      "무더위"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n드 · 킥 · 보\n힌트: 물건",
+     "answer": "킥보드",
+     "accepted": [
+      "킥보드"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n장 · 냉 · 고\n힌트: 물건",
+     "answer": "냉장고",
+     "accepted": [
+      "냉장고"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 발 · 전\n힌트: 장소",
+     "answer": "발전소",
+     "accepted": [
+      "발전소"
+     ],
+     "explanation": "분류: 장소"
+    }
+   ]
+  },
+  {
+   "testId": "ana-easy-4",
+   "order": 4,
+   "title": "낱말 만들기 · 쉬움 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n볼 · 핸 · 드\n힌트: 운동·놀이",
+     "answer": "핸드볼",
+     "accepted": [
+      "핸드볼"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n원 · 공 · 무\n힌트: 직업",
+     "answer": "공무원",
+     "accepted": [
+      "공무원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n걸 · 레 · 대\n힌트: 물건",
+     "answer": "대걸레",
+     "accepted": [
+      "대걸레"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n인 · 장 · 선\n힌트: 자연",
+     "answer": "선인장",
+     "accepted": [
+      "선인장"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n습 · 기 · 가\n힌트: 물건",
+     "answer": "가습기",
+     "accepted": [
+      "가습기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n로 · 라 · 오\n힌트: 자연",
+     "answer": "오로라",
+     "accepted": [
+      "오로라"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 기 · 나\n힌트: 자연",
+     "answer": "소나기",
+     "accepted": [
+      "소나기"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n랙 · 홀 · 블\n힌트: 자연",
+     "answer": "블랙홀",
+     "accepted": [
+      "블랙홀"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n원 · 은 · 행\n힌트: 직업",
+     "answer": "은행원",
+     "accepted": [
+      "은행원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n달 · 기 · 리\n힌트: 운동·놀이",
+     "answer": "달리기",
+     "accepted": [
+      "달리기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n장 · 짜 · 면\n힌트: 음식",
+     "answer": "짜장면",
+     "accepted": [
+      "짜장면"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n고 · 라 · 릴\n힌트: 동물",
+     "answer": "고릴라",
+     "accepted": [
+      "고릴라"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n복 · 아 · 숭\n힌트: 음식",
+     "answer": "복숭아",
+     "accepted": [
+      "복숭아"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n리 · 잠 · 자\n힌트: 동물",
+     "answer": "잠자리",
+     "accepted": [
+      "잠자리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n비 · 기 · 행\n힌트: 물건",
+     "answer": "비행기",
+     "accepted": [
+      "비행기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n움 · 닭 · 싸\n힌트: 운동·놀이",
+     "answer": "닭싸움",
+     "accepted": [
+      "닭싸움"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n비 · 갈 · 닭\n힌트: 음식",
+     "answer": "닭갈비",
+     "accepted": [
+      "닭갈비"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n태 · 릿 · 블\n힌트: 물건",
+     "answer": "태블릿",
+     "accepted": [
+      "태블릿"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n락 · 가 · 젓\n힌트: 물건",
+     "answer": "젓가락",
+     "accepted": [
+      "젓가락"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n달 · 이 · 팽\n힌트: 동물",
+     "answer": "달팽이",
+     "accepted": [
+      "달팽이"
+     ],
+     "explanation": "분류: 동물"
+    }
+   ]
+  },
+  {
+   "testId": "ana-easy-5",
+   "order": 5,
+   "title": "낱말 만들기 · 쉬움 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n빵 · 사 · 제\n힌트: 직업",
+     "answer": "제빵사",
+     "accepted": [
+      "제빵사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n차 · 기 · 역\n힌트: 장소",
+     "answer": "기차역",
+     "accepted": [
+      "기차역"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n전 · 사 · 운\n힌트: 직업",
+     "answer": "운전사",
+     "accepted": [
+      "운전사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n금 · 시 · 치\n힌트: 음식",
+     "answer": "시금치",
+     "accepted": [
+      "시금치"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n치 · 김 · 전\n힌트: 음식",
+     "answer": "김치전",
+     "accepted": [
+      "김치전"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n망 · 대 · 전\n힌트: 장소",
+     "answer": "전망대",
+     "accepted": [
+      "전망대"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 원 · 숭\n힌트: 동물",
+     "answer": "원숭이",
+     "accepted": [
+      "원숭이"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n루 · 자 · 빗\n힌트: 물건",
+     "answer": "빗자루",
+     "accepted": [
+      "빗자루"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n줄 · 기 · 넘\n힌트: 운동·놀이",
+     "answer": "줄넘기",
+     "accepted": [
+      "줄넘기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n정 · 사 · 비\n힌트: 직업",
+     "answer": "정비사",
+     "accepted": [
+      "정비사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n라 · 카 · 메\n힌트: 물건",
+     "answer": "카메라",
+     "accepted": [
+      "카메라"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n겹 · 삼 · 살\n힌트: 음식",
+     "answer": "삼겹살",
+     "accepted": [
+      "삼겹살"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 회 · 원\n힌트: 직업",
+     "answer": "회사원",
+     "accepted": [
+      "회사원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n징 · 오 · 어\n힌트: 동물",
+     "answer": "오징어",
+     "accepted": [
+      "오징어"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n빙 · 다 · 이\n힌트: 운동·놀이",
+     "answer": "다이빙",
+     "accepted": [
+      "다이빙"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n선 · 기 · 풍\n힌트: 물건",
+     "answer": "선풍기",
+     "accepted": [
+      "선풍기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n어 · 리 · 캐\n힌트: 물건",
+     "answer": "캐리어",
+     "accepted": [
+      "캐리어"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 양 · 영\n힌트: 직업",
+     "answer": "영양사",
+     "accepted": [
+      "영양사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 뚜 · 메\n힌트: 동물",
+     "answer": "메뚜기",
+     "accepted": [
+      "메뚜기"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n라 · 톤 · 마\n힌트: 운동·놀이",
+     "answer": "마라톤",
+     "accepted": [
+      "마라톤"
+     ],
+     "explanation": "분류: 운동·놀이"
+    }
+   ]
+  },
+  {
+   "testId": "ana-medium",
+   "order": 6,
+   "title": "낱말 만들기 · 보통 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n미 · 라 · 꾸 · 지\n힌트: 동물",
+     "answer": "미꾸라지",
+     "accepted": [
+      "미꾸라지"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n스 · 기 · 사 · 버\n힌트: 직업",
+     "answer": "버스기사",
+     "accepted": [
+      "버스기사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n자 · 채 · 잠 · 리\n힌트: 물건",
+     "answer": "잠자리채",
+     "accepted": [
+      "잠자리채"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n카 · 텔 · 스 · 라\n힌트: 음식",
+     "answer": "카스텔라",
+     "accepted": [
+      "카스텔라"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n중 · 수 · 발 · 레\n힌트: 운동·놀이",
+     "answer": "수중발레",
+     "accepted": [
+      "수중발레"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n선 · 동 · 운 · 수\n힌트: 직업",
+     "answer": "운동선수",
+     "accepted": [
+      "운동선수"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n보 · 기 · 찾 · 물\n힌트: 운동·놀이",
+     "answer": "보물찾기",
+     "accepted": [
+      "보물찾기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n벌 · 당 · 레 · 무\n힌트: 동물",
+     "answer": "무당벌레",
+     "accepted": [
+      "무당벌레"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 따 · 딱 · 리\n힌트: 동물",
+     "answer": "딱따구리",
+     "accepted": [
+      "딱따구리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 리 · 불 · 가\n힌트: 동물",
+     "answer": "불가사리",
+     "accepted": [
+      "불가사리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n국 · 수 · 비 · 빔\n힌트: 음식",
+     "answer": "비빔국수",
+     "accepted": [
+      "비빔국수"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n란 · 계 · 이 · 말\n힌트: 음식",
+     "answer": "계란말이",
+     "accepted": [
+      "계란말이"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 해 · 욕 · 장\n힌트: 장소",
+     "answer": "해수욕장",
+     "accepted": [
+      "해수욕장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 이 · 공 · 놀\n힌트: 운동·놀이",
+     "answer": "공기놀이",
+     "accepted": [
+      "공기놀이"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n카 · 프 · 리 · 파\n힌트: 음식",
+     "answer": "파프리카",
+     "accepted": [
+      "파프리카"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n아 · 서 · 나 · 운\n힌트: 직업",
+     "answer": "아나운서",
+     "accepted": [
+      "아나운서"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n터 · 콥 · 헬 · 리\n힌트: 물건",
+     "answer": "헬리콥터",
+     "accepted": [
+      "헬리콥터"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n과 · 무 · 나 · 사\n힌트: 자연",
+     "answer": "사과나무",
+     "accepted": [
+      "사과나무"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n딧 · 반 · 불 · 이\n힌트: 동물",
+     "answer": "반딧불이",
+     "accepted": [
+      "반딧불이"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 르 · 트 · 요\n힌트: 음식",
+     "answer": "요구르트",
+     "accepted": [
+      "요구르트"
+     ],
+     "explanation": "분류: 음식"
+    }
+   ]
+  },
+  {
+   "testId": "ana-medium-2",
+   "order": 7,
+   "title": "낱말 만들기 · 보통 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n가 · 지 · 상 · 하\n힌트: 장소",
+     "answer": "지하상가",
+     "accepted": [
+      "지하상가"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 치 · 기 · 팽\n힌트: 운동·놀이",
+     "answer": "팽이치기",
+     "accepted": [
+      "팽이치기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n텔 · 비 · 레 · 전\n힌트: 물건",
+     "answer": "텔레비전",
+     "accepted": [
+      "텔레비전"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n학 · 등 · 교 · 초\n힌트: 장소",
+     "answer": "초등학교",
+     "accepted": [
+      "초등학교"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n나 · 행 · 은 · 무\n힌트: 자연",
+     "answer": "은행나무",
+     "accepted": [
+      "은행나무"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n온 · 멜 · 카 · 레\n힌트: 동물",
+     "answer": "카멜레온",
+     "accepted": [
+      "카멜레온"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n치 · 슴 · 고 · 도\n힌트: 동물",
+     "answer": "고슴도치",
+     "accepted": [
+      "고슴도치"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 놀 · 공 · 원\n힌트: 장소",
+     "answer": "놀이공원",
+     "accepted": [
+      "놀이공원"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n물 · 원 · 병 · 동\n힌트: 장소",
+     "answer": "동물병원",
+     "accepted": [
+      "동물병원"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n필 · 테 · 스 · 라\n힌트: 운동·놀이",
+     "answer": "필라테스",
+     "accepted": [
+      "필라테스"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n주 · 센 · 터 · 민\n힌트: 장소",
+     "answer": "주민센터",
+     "accepted": [
+      "주민센터"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n너 · 이 · 디 · 자\n힌트: 직업",
+     "answer": "디자이너",
+     "accepted": [
+      "디자이너"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n리 · 구 · 쇠 · 똥\n힌트: 동물",
+     "answer": "쇠똥구리",
+     "accepted": [
+      "쇠똥구리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n유 · 밥 · 부 · 초\n힌트: 음식",
+     "answer": "유부초밥",
+     "accepted": [
+      "유부초밥"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n날 · 리 · 기 · 연\n힌트: 운동·놀이",
+     "answer": "연날리기",
+     "accepted": [
+      "연날리기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n가 · 작 · 사 · 진\n힌트: 직업",
+     "answer": "사진작가",
+     "accepted": [
+      "사진작가"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n레 · 통 · 쓰 · 기\n힌트: 물건",
+     "answer": "쓰레기통",
+     "accepted": [
+      "쓰레기통"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n우 · 딸 · 유 · 기\n힌트: 음식",
+     "answer": "딸기우유",
+     "accepted": [
+      "딸기우유"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n케 · 스 · 북 · 치\n힌트: 물건",
+     "answer": "스케치북",
+     "accepted": [
+      "스케치북"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n루 · 베 · 블 · 리\n힌트: 음식",
+     "answer": "블루베리",
+     "accepted": [
+      "블루베리"
+     ],
+     "explanation": "분류: 음식"
+    }
+   ]
+  },
+  {
+   "testId": "ana-medium-3",
+   "order": 8,
+   "title": "낱말 만들기 · 보통 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n늘 · 보 · 나 · 무\n힌트: 동물",
+     "answer": "나무늘보",
+     "accepted": [
+      "나무늘보"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n레 · 파 · 스 · 크\n힌트: 물건",
+     "answer": "크레파스",
+     "accepted": [
+      "크레파스"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 치 · 지 · 딱\n힌트: 운동·놀이",
+     "answer": "딱지치기",
+     "accepted": [
+      "딱지치기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n나 · 이 · 하 · 에\n힌트: 동물",
+     "answer": "하이에나",
+     "accepted": [
+      "하이에나"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n원 · 대 · 방 · 소\n힌트: 직업",
+     "answer": "소방대원",
+     "accepted": [
+      "소방대원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n트 · 마 · 형 · 대\n힌트: 장소",
+     "answer": "대형마트",
+     "accepted": [
+      "대형마트"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 게 · 름 · 뭉\n힌트: 자연",
+     "answer": "뭉게구름",
+     "accepted": [
+      "뭉게구름"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 꿉 · 이 · 놀\n힌트: 운동·놀이",
+     "answer": "소꿉놀이",
+     "accepted": [
+      "소꿉놀이"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n트 · 린 · 램 · 펄\n힌트: 운동·놀이",
+     "answer": "트램펄린",
+     "accepted": [
+      "트램펄린"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n로 · 브 · 리 · 콜\n힌트: 음식",
+     "answer": "브로콜리",
+     "accepted": [
+      "브로콜리"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n민 · 턴 · 배 · 드\n힌트: 운동·놀이",
+     "answer": "배드민턴",
+     "accepted": [
+      "배드민턴"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n꼭 · 질 · 바 · 숨\n힌트: 운동·놀이",
+     "answer": "숨바꼭질",
+     "accepted": [
+      "숨바꼭질"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n게 · 파 · 티 · 스\n힌트: 음식",
+     "answer": "스파게티",
+     "accepted": [
+      "스파게티"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n크 · 상 · 아 · 루\n힌트: 음식",
+     "answer": "크루아상",
+     "accepted": [
+      "크루아상"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n교 · 등 · 학 · 고\n힌트: 장소",
+     "answer": "고등학교",
+     "accepted": [
+      "고등학교"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n개 · 천 · 번 · 둥\n힌트: 자연",
+     "answer": "천둥번개",
+     "accepted": [
+      "천둥번개"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n랑 · 오 · 탄 · 우\n힌트: 동물",
+     "answer": "오랑우탄",
+     "accepted": [
+      "오랑우탄"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n빅 · 로 · 에 · 어\n힌트: 운동·놀이",
+     "answer": "에어로빅",
+     "accepted": [
+      "에어로빅"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n팬 · 프 · 라 · 이\n힌트: 물건",
+     "answer": "프라이팬",
+     "accepted": [
+      "프라이팬"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n두 · 성 · 칠 · 북\n힌트: 자연",
+     "answer": "북두칠성",
+     "accepted": [
+      "북두칠성"
+     ],
+     "explanation": "분류: 자연"
+    }
+   ]
+  },
+  {
+   "testId": "ana-medium-4",
+   "order": 9,
+   "title": "낱말 만들기 · 보통 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n게 · 드 · 보 · 임\n힌트: 운동·놀이",
+     "answer": "보드게임",
+     "accepted": [
+      "보드게임"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n뚜 · 라 · 미 · 귀\n힌트: 동물",
+     "answer": "귀뚜라미",
+     "accepted": [
+      "귀뚜라미"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n솥 · 전 · 기 · 밥\n힌트: 물건",
+     "answer": "전기밥솥",
+     "accepted": [
+      "전기밥솥"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n리 · 봉 · 우 · 산\n힌트: 자연",
+     "answer": "산봉우리",
+     "accepted": [
+      "산봉우리"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 요 · 강 · 가\n힌트: 직업",
+     "answer": "요가강사",
+     "accepted": [
+      "요가강사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n폰 · 트 · 스 · 마\n힌트: 물건",
+     "answer": "스마트폰",
+     "accepted": [
+      "스마트폰"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n통 · 전 · 시 · 장\n힌트: 장소",
+     "answer": "전통시장",
+     "accepted": [
+      "전통시장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n시 · 계 · 손 · 목\n힌트: 물건",
+     "answer": "손목시계",
+     "accepted": [
+      "손목시계"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n위 · 드 · 치 · 샌\n힌트: 음식",
+     "answer": "샌드위치",
+     "accepted": [
+      "샌드위치"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n잇 · 말 · 기 · 끝\n힌트: 운동·놀이",
+     "answer": "끝말잇기",
+     "accepted": [
+      "끝말잇기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n바 · 이 · 린 · 올\n힌트: 물건",
+     "answer": "바이올린",
+     "accepted": [
+      "바이올린"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n카 · 네 · 션 · 이\n힌트: 자연",
+     "answer": "카네이션",
+     "accepted": [
+      "카네이션"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n애 · 인 · 플 · 파\n힌트: 음식",
+     "answer": "파인애플",
+     "accepted": [
+      "파인애플"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n드 · 노 · 보 · 스\n힌트: 운동·놀이",
+     "answer": "스노보드",
+     "accepted": [
+      "스노보드"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n카 · 도 · 아 · 보\n힌트: 음식",
+     "answer": "아보카도",
+     "accepted": [
+      "아보카도"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 배 · 택 · 기\n힌트: 직업",
+     "answer": "택배기사",
+     "accepted": [
+      "택배기사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n풍 · 무 · 나 · 단\n힌트: 자연",
+     "answer": "단풍나무",
+     "accepted": [
+      "단풍나무"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n크 · 테 · 스 · 이\n힌트: 음식",
+     "answer": "스테이크",
+     "accepted": [
+      "스테이크"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n국 · 치 · 잔 · 수\n힌트: 음식",
+     "answer": "잔치국수",
+     "accepted": [
+      "잔치국수"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 구 · 축 · 선\n힌트: 직업",
+     "answer": "축구선수",
+     "accepted": [
+      "축구선수"
+     ],
+     "explanation": "분류: 직업"
+    }
+   ]
+  },
+  {
+   "testId": "ana-medium-5",
+   "order": 10,
+   "title": "낱말 만들기 · 보통 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n개 · 김 · 치 · 찌\n힌트: 음식",
+     "answer": "김치찌개",
+     "accepted": [
+      "김치찌개"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n육 · 음 · 제 · 볶\n힌트: 음식",
+     "answer": "제육볶음",
+     "accepted": [
+      "제육볶음"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n찌 · 개 · 된 · 장\n힌트: 음식",
+     "answer": "된장찌개",
+     "accepted": [
+      "된장찌개"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n로 · 멜 · 시 · 마\n힌트: 음식",
+     "answer": "마시멜로",
+     "accepted": [
+      "마시멜로"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n산 · 이 · 놀 · 동\n힌트: 장소",
+     "answer": "놀이동산",
+     "accepted": [
+      "놀이동산"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n리 · 다 · 기 · 줄\n힌트: 운동·놀이",
+     "answer": "줄다리기",
+     "accepted": [
+      "줄다리기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n대 · 개 · 찌 · 부\n힌트: 음식",
+     "answer": "부대찌개",
+     "accepted": [
+      "부대찌개"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n속 · 고 · 로 · 도\n힌트: 장소",
+     "answer": "고속도로",
+     "accepted": [
+      "고속도로"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n거 · 바 · 북 · 다\n힌트: 동물",
+     "answer": "바다거북",
+     "accepted": [
+      "바다거북"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n큐 · 레 · 터 · 이\n힌트: 직업",
+     "answer": "큐레이터",
+     "accepted": [
+      "큐레이터"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 의 · 치 · 과\n힌트: 직업",
+     "answer": "치과의사",
+     "accepted": [
+      "치과의사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 선 · 구 · 야\n힌트: 직업",
+     "answer": "야구선수",
+     "accepted": [
+      "야구선수"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n타 · 바 · 스 · 리\n힌트: 직업",
+     "answer": "바리스타",
+     "accepted": [
+      "바리스타"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n끄 · 미 · 럼 · 틀\n힌트: 운동·놀이",
+     "answer": "미끄럼틀",
+     "accepted": [
+      "미끄럼틀"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 팬 · 크 · 케\n힌트: 음식",
+     "answer": "팬케이크",
+     "accepted": [
+      "팬케이크"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n필 · 이 · 연 · 꽂\n힌트: 물건",
+     "answer": "연필꽂이",
+     "accepted": [
+      "연필꽂이"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n스 · 이 · 케 · 트\n힌트: 물건",
+     "answer": "스케이트",
+     "accepted": [
+      "스케이트"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n라 · 기 · 바 · 해\n힌트: 자연",
+     "answer": "해바라기",
+     "accepted": [
+      "해바라기"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n라 · 이 · 버 · 드\n힌트: 물건",
+     "answer": "드라이버",
+     "accepted": [
+      "드라이버"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n모 · 하 · 카 · 니\n힌트: 물건",
+     "answer": "하모니카",
+     "accepted": [
+      "하모니카"
+     ],
+     "explanation": "분류: 물건"
+    }
+   ]
+  },
+  {
+   "testId": "ana-hard",
+   "order": 11,
+   "title": "낱말 만들기 · 어려움 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 리 · 너",
+     "answer": "너구리",
+     "accepted": [
+      "너구리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n프 · 테 · 이",
+     "answer": "테이프",
+     "accepted": [
+      "테이프"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n커 · 스 · 피",
+     "answer": "스피커",
+     "accepted": [
+      "스피커"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n우 · 개 · 지",
+     "answer": "지우개",
+     "accepted": [
+      "지우개"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n거 · 자 · 전",
+     "answer": "자전거",
+     "accepted": [
+      "자전거"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 칼 · 국",
+     "answer": "칼국수",
+     "accepted": [
+      "칼국수"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n핑 · 캠 · 장",
+     "answer": "캠핑장",
+     "accepted": [
+      "캠핑장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n라 · 트 · 앵 · 이 · 글\n힌트: 물건",
+     "answer": "트라이앵글",
+     "accepted": [
+      "트라이앵글"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n스 · 터 · 롤 · 러 · 코\n힌트: 물건",
+     "answer": "롤러코스터",
+     "accepted": [
+      "롤러코스터"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n리 · 미 · 다",
+     "answer": "다리미",
+     "accepted": [
+      "다리미"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 건 · 돌 · 기 · 리\n힌트: 운동·놀이",
+     "answer": "수건돌리기",
+     "accepted": [
+      "수건돌리기"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n국 · 송 · 방",
+     "answer": "방송국",
+     "accepted": [
+      "방송국"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n마 · 고 · 구",
+     "answer": "고구마",
+     "accepted": [
+      "고구마"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 호 · 간",
+     "answer": "간호사",
+     "accepted": [
+      "간호사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n충 · 기 · 전",
+     "answer": "충전기",
+     "accepted": [
+      "충전기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n비 · 원 · 경",
+     "answer": "경비원",
+     "accepted": [
+      "경비원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 세 · 탁",
+     "answer": "세탁소",
+     "accepted": [
+      "세탁소"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n비 · 사 · 행 · 주 · 우\n힌트: 직업",
+     "answer": "우주비행사",
+     "accepted": [
+      "우주비행사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n관 · 외 · 교",
+     "answer": "외교관",
+     "accepted": [
+      "외교관"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n멧 · 지 · 돼",
+     "answer": "멧돼지",
+     "accepted": [
+      "멧돼지"
+     ],
+     "explanation": "분류: 동물"
+    }
+   ]
+  },
+  {
+   "testId": "ana-hard-2",
+   "order": 12,
+   "title": "낱말 만들기 · 어려움 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n림 · 이 · 아 · 스 · 크\n힌트: 음식",
+     "answer": "아이스크림",
+     "accepted": [
+      "아이스크림"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n실 · 학 · 과",
+     "answer": "과학실",
+     "accepted": [
+      "과학실"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n컵 · 머 · 그",
+     "answer": "머그컵",
+     "accepted": [
+      "머그컵"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n장 · 링 · 볼",
+     "answer": "볼링장",
+     "accepted": [
+      "볼링장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n필 · 색 · 연",
+     "answer": "색연필",
+     "accepted": [
+      "색연필"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n극 · 곰 · 북",
+     "answer": "북극곰",
+     "accepted": [
+      "북극곰"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n고 · 돌 · 래",
+     "answer": "돌고래",
+     "accepted": [
+      "돌고래"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n철 · 지 · 하",
+     "answer": "지하철",
+     "accepted": [
+      "지하철"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n달 · 부 · 우 · 편 · 배\n힌트: 직업",
+     "answer": "우편배달부",
+     "accepted": [
+      "우편배달부"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n뱀 · 마 · 도",
+     "answer": "도마뱀",
+     "accepted": [
+      "도마뱀"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 장 · 축",
+     "answer": "축구장",
+     "accepted": [
+      "축구장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n경 · 미 · 원 · 환 · 화\n힌트: 직업",
+     "answer": "환경미화원",
+     "accepted": [
+      "환경미화원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n밥 · 주 · 먹",
+     "answer": "주먹밥",
+     "accepted": [
+      "주먹밥"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n오 · 스 · 렌 · 주 · 지\n힌트: 음식",
+     "answer": "오렌지주스",
+     "accepted": [
+      "오렌지주스"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n볶 · 밥 · 음",
+     "answer": "볶음밥",
+     "accepted": [
+      "볶음밥"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n영 · 장 · 수",
+     "answer": "수영장",
+     "accepted": [
+      "수영장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 고 · 양",
+     "answer": "고양이",
+     "accepted": [
+      "고양이"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n니 · 터 · 모",
+     "answer": "모니터",
+     "accepted": [
+      "모니터"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n널 · 버 · 스 · 미 · 터\n힌트: 장소",
+     "answer": "버스터미널",
+     "accepted": [
+      "버스터미널"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n빵 · 어 · 붕",
+     "answer": "붕어빵",
+     "accepted": [
+      "붕어빵"
+     ],
+     "explanation": "분류: 음식"
+    }
+   ]
+  },
+  {
+   "testId": "ana-hard-3",
+   "order": 13,
+   "title": "낱말 만들기 · 어려움 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n국 · 순 · 댓",
+     "answer": "순댓국",
+     "accepted": [
+      "순댓국"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n생 · 님 · 선",
+     "answer": "선생님",
+     "accepted": [
+      "선생님"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n주 · 거 · 우 · 장 · 정\n힌트: 장소",
+     "answer": "우주정거장",
+     "accepted": [
+      "우주정거장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n원 · 승 · 무",
+     "answer": "승무원",
+     "accepted": [
+      "승무원"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n궁 · 화 · 무",
+     "answer": "무궁화",
+     "accepted": [
+      "무궁화"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n버 · 유 · 튜",
+     "answer": "유튜버",
+     "accepted": [
+      "유튜버"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n계 · 태 · 양",
+     "answer": "태양계",
+     "accepted": [
+      "태양계"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n그 · 릇 · 밥",
+     "answer": "밥그릇",
+     "accepted": [
+      "밥그릇"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n코 · 리 · 끼",
+     "answer": "코끼리",
+     "accepted": [
+      "코끼리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n새 · 공 · 작",
+     "answer": "공작새",
+     "accepted": [
+      "공작새"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n추 · 양 · 배",
+     "answer": "양배추",
+     "accepted": [
+      "양배추"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n경 · 차 · 찰",
+     "answer": "경찰차",
+     "accepted": [
+      "경찰차"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n카 · 스 · 이 · 라 · 레\n힌트: 음식",
+     "answer": "카레라이스",
+     "accepted": [
+      "카레라이스"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n름 · 달 · 보",
+     "answer": "보름달",
+     "accepted": [
+      "보름달"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n니 · 테 · 스",
+     "answer": "테니스",
+     "accepted": [
+      "테니스"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n북 · 노 · 트",
+     "answer": "노트북",
+     "accepted": [
+      "노트북"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 터 · 리 · 엘 · 베\n힌트: 물건",
+     "answer": "엘리베이터",
+     "accepted": [
+      "엘리베이터"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n자 · 전 · 인 · 지 · 레\n힌트: 물건",
+     "answer": "전자레인지",
+     "accepted": [
+      "전자레인지"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 스 · 러 · 플 · 테\n힌트: 물건",
+     "answer": "스테이플러",
+     "accepted": [
+      "스테이플러"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n버 · 린 · 탬",
+     "answer": "탬버린",
+     "accepted": [
+      "탬버린"
+     ],
+     "explanation": "분류: 물건"
+    }
+   ]
+  },
+  {
+   "testId": "ana-hard-4",
+   "order": 14,
+   "title": "낱말 만들기 · 어려움 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n파 · 해 · 리",
+     "answer": "해파리",
+     "accepted": [
+      "해파리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n미 · 현 · 경",
+     "answer": "현미경",
+     "accepted": [
+      "현미경"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 볶 · 떡",
+     "answer": "떡볶이",
+     "accepted": [
+      "떡볶이"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n기 · 도 · 면",
+     "answer": "면도기",
+     "accepted": [
+      "면도기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n두 · 비 · 꺼",
+     "answer": "두꺼비",
+     "accepted": [
+      "두꺼비"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n가 · 용 · 무",
+     "answer": "무용가",
+     "accepted": [
+      "무용가"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n아 · 이 · 키 · 하 · 스\n힌트: 운동·놀이",
+     "answer": "아이스하키",
+     "accepted": [
+      "아이스하키"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n마 · 귀 · 사",
+     "answer": "사마귀",
+     "accepted": [
+      "사마귀"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n구 · 발 · 야",
+     "answer": "발야구",
+     "accepted": [
+      "발야구"
+     ],
+     "explanation": "분류: 운동·놀이"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n스 · 장 · 키",
+     "answer": "스키장",
+     "accepted": [
+      "스키장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n동 · 화 · 운",
+     "answer": "운동화",
+     "accepted": [
+      "운동화"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n아 · 니 · 트 · 스 · 피\n힌트: 직업",
+     "answer": "피아니스트",
+     "accepted": [
+      "피아니스트"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n문 · 대 · 천",
+     "answer": "천문대",
+     "accepted": [
+      "천문대"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n의 · 사 · 수",
+     "answer": "수의사",
+     "accepted": [
+      "수의사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n뇽 · 롱 · 도",
+     "answer": "도롱뇽",
+     "accepted": [
+      "도롱뇽"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n치 · 음 · 볶 · 밥 · 김\n힌트: 음식",
+     "answer": "김치볶음밥",
+     "accepted": [
+      "김치볶음밥"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n펫 · 럼 · 트",
+     "answer": "트럼펫",
+     "accepted": [
+      "트럼펫"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n가 · 책 · 방",
+     "answer": "책가방",
+     "accepted": [
+      "책가방"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n즈 · 치 · 이 · 케 · 크\n힌트: 음식",
+     "answer": "치즈케이크",
+     "accepted": [
+      "치즈케이크"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n가 · 역 · 번",
+     "answer": "번역가",
+     "accepted": [
+      "번역가"
+     ],
+     "explanation": "분류: 직업"
+    }
+   ]
+  },
+  {
+   "testId": "ana-hard-5",
+   "order": 15,
+   "title": "낱말 만들기 · 어려움 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n돈 · 스 · 가",
+     "answer": "돈가스",
+     "accepted": [
+      "돈가스"
+     ],
+     "explanation": "분류: 음식"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n어 · 이 · 폰",
+     "answer": "이어폰",
+     "accepted": [
+      "이어폰"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 뿔 · 코",
+     "answer": "코뿔소",
+     "accepted": [
+      "코뿔소"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n관 · 찰 · 경",
+     "answer": "경찰관",
+     "accepted": [
+      "경찰관"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n미 · 빼 · 올",
+     "answer": "올빼미",
+     "accepted": [
+      "올빼미"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n수 · 뎅 · 장 · 풍 · 이\n힌트: 동물",
+     "answer": "장수풍뎅이",
+     "accepted": [
+      "장수풍뎅이"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n미 · 장 · 꽃",
+     "answer": "장미꽃",
+     "accepted": [
+      "장미꽃"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n세 · 기 · 탁",
+     "answer": "세탁기",
+     "accepted": [
+      "세탁기"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n소 · 연 · 구",
+     "answer": "연구소",
+     "accepted": [
+      "연구소"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 문 · 신",
+     "answer": "신문사",
+     "accepted": [
+      "신문사"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n아 · 스 · 크 · 이 · 링\n힌트: 장소",
+     "answer": "아이스링크",
+     "accepted": [
+      "아이스링크"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n은 · 수 · 하",
+     "answer": "은하수",
+     "accepted": [
+      "은하수"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n독 · 리 · 수",
+     "answer": "독수리",
+     "accepted": [
+      "독수리"
+     ],
+     "explanation": "분류: 동물"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n동 · 장 · 운",
+     "answer": "운동장",
+     "accepted": [
+      "운동장"
+     ],
+     "explanation": "분류: 장소"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n어 · 에 · 컨",
+     "answer": "에어컨",
+     "accepted": [
+      "에어컨"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n나 · 개 · 리",
+     "answer": "개나리",
+     "accepted": [
+      "개나리"
+     ],
+     "explanation": "분류: 자연"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n이 · 터 · 에 · 크 · 리\n힌트: 직업",
+     "answer": "크리에이터",
+     "accepted": [
+      "크리에이터"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n네 · 츠 · 캐 · 터 · 스\n힌트: 물건",
+     "answer": "캐스터네츠",
+     "accepted": [
+      "캐스터네츠"
+     ],
+     "explanation": "분류: 물건"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n사 · 물 · 료 · 리 · 치\n힌트: 직업",
+     "answer": "물리치료사",
+     "accepted": [
+      "물리치료사"
+     ],
+     "explanation": "분류: 직업"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "글자를 다시 배열해 낱말을 만드시오.\n물 · 자 · 쇠",
+     "answer": "자물쇠",
+     "accepted": [
+      "자물쇠"
+     ],
+     "explanation": "분류: 물건"
+    }
+   ]
+  }
+ ]
+}

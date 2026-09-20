@@ -1,0 +1,4035 @@
+{
+ "packId": "gen-memory",
+ "schemaVersion": 1,
+ "title": "숫자 기억",
+ "locale": "ko-KR",
+ "visibility": "public",
+ "scoringModel": "correct",
+ "intro": "숫자를 잠깐 보여 준 뒤 가립니다. 본 숫자를 그대로 입력하세요. 쉬움 5자리, 보통 7자리, 어려움은 6자리를 거꾸로 입력합니다. 다 외웠으면 \"다 외웠어요\"를 눌러 바로 넘어가도 됩니다.",
+ "provenance": {
+  "kind": "generated",
+  "source": "자체 생성기 engine/generators/memory.ts (시드 2033)"
+ },
+ "tests": [
+  {
+   "testId": "mem-easy",
+   "order": 1,
+   "title": "숫자 기억 · 쉬움 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  2  9  2  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "02925",
+     "accepted": [
+      "02925",
+      "0,2,9,2,5"
+     ],
+     "explanation": "본 숫자: 0 2 9 2 5"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  5  9  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "90590",
+     "accepted": [
+      "90590",
+      "9,0,5,9,0"
+     ],
+     "explanation": "본 숫자: 9 0 5 9 0"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  7  3  7  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "47371",
+     "accepted": [
+      "47371",
+      "4,7,3,7,1"
+     ],
+     "explanation": "본 숫자: 4 7 3 7 1"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  4  5  4  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "14541",
+     "accepted": [
+      "14541",
+      "1,4,5,4,1"
+     ],
+     "explanation": "본 숫자: 1 4 5 4 1"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  9  3  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "90936",
+     "accepted": [
+      "90936",
+      "9,0,9,3,6"
+     ],
+     "explanation": "본 숫자: 9 0 9 3 6"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  4  1  9  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "74190",
+     "accepted": [
+      "74190",
+      "7,4,1,9,0"
+     ],
+     "explanation": "본 숫자: 7 4 1 9 0"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  4  2  8  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "34289",
+     "accepted": [
+      "34289",
+      "3,4,2,8,9"
+     ],
+     "explanation": "본 숫자: 3 4 2 8 9"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  2  1  5  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "52153",
+     "accepted": [
+      "52153",
+      "5,2,1,5,3"
+     ],
+     "explanation": "본 숫자: 5 2 1 5 3"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  1  6  8  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "01681",
+     "accepted": [
+      "01681",
+      "0,1,6,8,1"
+     ],
+     "explanation": "본 숫자: 0 1 6 8 1"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  8  0  1  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "68016",
+     "accepted": [
+      "68016",
+      "6,8,0,1,6"
+     ],
+     "explanation": "본 숫자: 6 8 0 1 6"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  1  0  2  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "81021",
+     "accepted": [
+      "81021",
+      "8,1,0,2,1"
+     ],
+     "explanation": "본 숫자: 8 1 0 2 1"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  8  4  2  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "58423",
+     "accepted": [
+      "58423",
+      "5,8,4,2,3"
+     ],
+     "explanation": "본 숫자: 5 8 4 2 3"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  0  8  9  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "60897",
+     "accepted": [
+      "60897",
+      "6,0,8,9,7"
+     ],
+     "explanation": "본 숫자: 6 0 8 9 7"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  7  2  1  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "17215",
+     "accepted": [
+      "17215",
+      "1,7,2,1,5"
+     ],
+     "explanation": "본 숫자: 1 7 2 1 5"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  3  8  6  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "43865",
+     "accepted": [
+      "43865",
+      "4,3,8,6,5"
+     ],
+     "explanation": "본 숫자: 4 3 8 6 5"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  5  3  1  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "95319",
+     "accepted": [
+      "95319",
+      "9,5,3,1,9"
+     ],
+     "explanation": "본 숫자: 9 5 3 1 9"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  4  2  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "92426",
+     "accepted": [
+      "92426",
+      "9,2,4,2,6"
+     ],
+     "explanation": "본 숫자: 9 2 4 2 6"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  7  8  0  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "47806",
+     "accepted": [
+      "47806",
+      "4,7,8,0,6"
+     ],
+     "explanation": "본 숫자: 4 7 8 0 6"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  0  9  8  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "60986",
+     "accepted": [
+      "60986",
+      "6,0,9,8,6"
+     ],
+     "explanation": "본 숫자: 6 0 9 8 6"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  1  0  9  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "41093",
+     "accepted": [
+      "41093",
+      "4,1,0,9,3"
+     ],
+     "explanation": "본 숫자: 4 1 0 9 3"
+    }
+   ]
+  },
+  {
+   "testId": "mem-easy-2",
+   "order": 2,
+   "title": "숫자 기억 · 쉬움 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  6  5  2  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "46523",
+     "accepted": [
+      "46523",
+      "4,6,5,2,3"
+     ],
+     "explanation": "본 숫자: 4 6 5 2 3"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  3  0  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "27302",
+     "accepted": [
+      "27302",
+      "2,7,3,0,2"
+     ],
+     "explanation": "본 숫자: 2 7 3 0 2"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  8  2  4  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "28246",
+     "accepted": [
+      "28246",
+      "2,8,2,4,6"
+     ],
+     "explanation": "본 숫자: 2 8 2 4 6"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  9  7  1  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "49710",
+     "accepted": [
+      "49710",
+      "4,9,7,1,0"
+     ],
+     "explanation": "본 숫자: 4 9 7 1 0"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  0  3  2  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "10328",
+     "accepted": [
+      "10328",
+      "1,0,3,2,8"
+     ],
+     "explanation": "본 숫자: 1 0 3 2 8"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  4  5  7  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "74578",
+     "accepted": [
+      "74578",
+      "7,4,5,7,8"
+     ],
+     "explanation": "본 숫자: 7 4 5 7 8"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  1  3  1  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "31318",
+     "accepted": [
+      "31318",
+      "3,1,3,1,8"
+     ],
+     "explanation": "본 숫자: 3 1 3 1 8"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  2  4  3  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "12439",
+     "accepted": [
+      "12439",
+      "1,2,4,3,9"
+     ],
+     "explanation": "본 숫자: 1 2 4 3 9"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  8  4  1  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "68419",
+     "accepted": [
+      "68419",
+      "6,8,4,1,9"
+     ],
+     "explanation": "본 숫자: 6 8 4 1 9"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  5  8  4  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "65849",
+     "accepted": [
+      "65849",
+      "6,5,8,4,9"
+     ],
+     "explanation": "본 숫자: 6 5 8 4 9"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  2  4  1  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "72418",
+     "accepted": [
+      "72418",
+      "7,2,4,1,8"
+     ],
+     "explanation": "본 숫자: 7 2 4 1 8"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  4  9  6  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "64969",
+     "accepted": [
+      "64969",
+      "6,4,9,6,9"
+     ],
+     "explanation": "본 숫자: 6 4 9 6 9"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  1  4  9  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "61495",
+     "accepted": [
+      "61495",
+      "6,1,4,9,5"
+     ],
+     "explanation": "본 숫자: 6 1 4 9 5"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  6  1  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "94617",
+     "accepted": [
+      "94617",
+      "9,4,6,1,7"
+     ],
+     "explanation": "본 숫자: 9 4 6 1 7"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  4  8  3  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "34832",
+     "accepted": [
+      "34832",
+      "3,4,8,3,2"
+     ],
+     "explanation": "본 숫자: 3 4 8 3 2"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  3  2  9  4",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "23294",
+     "accepted": [
+      "23294",
+      "2,3,2,9,4"
+     ],
+     "explanation": "본 숫자: 2 3 2 9 4"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  3  8  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "84389",
+     "accepted": [
+      "84389",
+      "8,4,3,8,9"
+     ],
+     "explanation": "본 숫자: 8 4 3 8 9"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  9  3  8  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "59385",
+     "accepted": [
+      "59385",
+      "5,9,3,8,5"
+     ],
+     "explanation": "본 숫자: 5 9 3 8 5"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  5  7  2  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "75725",
+     "accepted": [
+      "75725",
+      "7,5,7,2,5"
+     ],
+     "explanation": "본 숫자: 7 5 7 2 5"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  2  4  3  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "02439",
+     "accepted": [
+      "02439",
+      "0,2,4,3,9"
+     ],
+     "explanation": "본 숫자: 0 2 4 3 9"
+    }
+   ]
+  },
+  {
+   "testId": "mem-easy-3",
+   "order": 3,
+   "title": "숫자 기억 · 쉬움 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  9  2  0  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "49201",
+     "accepted": [
+      "49201",
+      "4,9,2,0,1"
+     ],
+     "explanation": "본 숫자: 4 9 2 0 1"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  9  6  5  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "69653",
+     "accepted": [
+      "69653",
+      "6,9,6,5,3"
+     ],
+     "explanation": "본 숫자: 6 9 6 5 3"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  8  0  5  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "18053",
+     "accepted": [
+      "18053",
+      "1,8,0,5,3"
+     ],
+     "explanation": "본 숫자: 1 8 0 5 3"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  9  3  4  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "59349",
+     "accepted": [
+      "59349",
+      "5,9,3,4,9"
+     ],
+     "explanation": "본 숫자: 5 9 3 4 9"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  4  7  6  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "04762",
+     "accepted": [
+      "04762",
+      "0,4,7,6,2"
+     ],
+     "explanation": "본 숫자: 0 4 7 6 2"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  6  4  7  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "96475",
+     "accepted": [
+      "96475",
+      "9,6,4,7,5"
+     ],
+     "explanation": "본 숫자: 9 6 4 7 5"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  8  1  7  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "58176",
+     "accepted": [
+      "58176",
+      "5,8,1,7,6"
+     ],
+     "explanation": "본 숫자: 5 8 1 7 6"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  3  4  8  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "03486",
+     "accepted": [
+      "03486",
+      "0,3,4,8,6"
+     ],
+     "explanation": "본 숫자: 0 3 4 8 6"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  1  0  4  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "51043",
+     "accepted": [
+      "51043",
+      "5,1,0,4,3"
+     ],
+     "explanation": "본 숫자: 5 1 0 4 3"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  9  3  4  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "79348",
+     "accepted": [
+      "79348",
+      "7,9,3,4,8"
+     ],
+     "explanation": "본 숫자: 7 9 3 4 8"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  9  0  5  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "39057",
+     "accepted": [
+      "39057",
+      "3,9,0,5,7"
+     ],
+     "explanation": "본 숫자: 3 9 0 5 7"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  2  0  6  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "12068",
+     "accepted": [
+      "12068",
+      "1,2,0,6,8"
+     ],
+     "explanation": "본 숫자: 1 2 0 6 8"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  5  8  6  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "45868",
+     "accepted": [
+      "45868",
+      "4,5,8,6,8"
+     ],
+     "explanation": "본 숫자: 4 5 8 6 8"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  9  0  5  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "09059",
+     "accepted": [
+      "09059",
+      "0,9,0,5,9"
+     ],
+     "explanation": "본 숫자: 0 9 0 5 9"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  0  5  3  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "40538",
+     "accepted": [
+      "40538",
+      "4,0,5,3,8"
+     ],
+     "explanation": "본 숫자: 4 0 5 3 8"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  3  1  2  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "73127",
+     "accepted": [
+      "73127",
+      "7,3,1,2,7"
+     ],
+     "explanation": "본 숫자: 7 3 1 2 7"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  3  0  1  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "63019",
+     "accepted": [
+      "63019",
+      "6,3,0,1,9"
+     ],
+     "explanation": "본 숫자: 6 3 0 1 9"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  0  1  7  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "30173",
+     "accepted": [
+      "30173",
+      "3,0,1,7,3"
+     ],
+     "explanation": "본 숫자: 3 0 1 7 3"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  5  6  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "91568",
+     "accepted": [
+      "91568",
+      "9,1,5,6,8"
+     ],
+     "explanation": "본 숫자: 9 1 5 6 8"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  8  3  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "94835",
+     "accepted": [
+      "94835",
+      "9,4,8,3,5"
+     ],
+     "explanation": "본 숫자: 9 4 8 3 5"
+    }
+   ]
+  },
+  {
+   "testId": "mem-easy-4",
+   "order": 4,
+   "title": "숫자 기억 · 쉬움 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  7  0  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "84706",
+     "accepted": [
+      "84706",
+      "8,4,7,0,6"
+     ],
+     "explanation": "본 숫자: 8 4 7 0 6"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  9  5  7  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "29573",
+     "accepted": [
+      "29573",
+      "2,9,5,7,3"
+     ],
+     "explanation": "본 숫자: 2 9 5 7 3"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  8  5  7  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "28572",
+     "accepted": [
+      "28572",
+      "2,8,5,7,2"
+     ],
+     "explanation": "본 숫자: 2 8 5 7 2"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  4  6  1  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "54610",
+     "accepted": [
+      "54610",
+      "5,4,6,1,0"
+     ],
+     "explanation": "본 숫자: 5 4 6 1 0"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  6  9  4  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "56949",
+     "accepted": [
+      "56949",
+      "5,6,9,4,9"
+     ],
+     "explanation": "본 숫자: 5 6 9 4 9"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  5  7  0  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "65709",
+     "accepted": [
+      "65709",
+      "6,5,7,0,9"
+     ],
+     "explanation": "본 숫자: 6 5 7 0 9"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  7  5  6  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "07560",
+     "accepted": [
+      "07560",
+      "0,7,5,6,0"
+     ],
+     "explanation": "본 숫자: 0 7 5 6 0"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  2  3  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "90236",
+     "accepted": [
+      "90236",
+      "9,0,2,3,6"
+     ],
+     "explanation": "본 숫자: 9 0 2 3 6"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  2  5  9  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "42595",
+     "accepted": [
+      "42595",
+      "4,2,5,9,5"
+     ],
+     "explanation": "본 숫자: 4 2 5 9 5"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  7  9  1  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "17916",
+     "accepted": [
+      "17916",
+      "1,7,9,1,6"
+     ],
+     "explanation": "본 숫자: 1 7 9 1 6"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  2  4  3  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "82435",
+     "accepted": [
+      "82435",
+      "8,2,4,3,5"
+     ],
+     "explanation": "본 숫자: 8 2 4 3 5"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  8  9  1  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "38910",
+     "accepted": [
+      "38910",
+      "3,8,9,1,0"
+     ],
+     "explanation": "본 숫자: 3 8 9 1 0"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  0  3  8  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "80385",
+     "accepted": [
+      "80385",
+      "8,0,3,8,5"
+     ],
+     "explanation": "본 숫자: 8 0 3 8 5"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  1  8  1  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "71816",
+     "accepted": [
+      "71816",
+      "7,1,8,1,6"
+     ],
+     "explanation": "본 숫자: 7 1 8 1 6"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  3  0  7  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "43071",
+     "accepted": [
+      "43071",
+      "4,3,0,7,1"
+     ],
+     "explanation": "본 숫자: 4 3 0 7 1"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  7  1  2  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "57125",
+     "accepted": [
+      "57125",
+      "5,7,1,2,5"
+     ],
+     "explanation": "본 숫자: 5 7 1 2 5"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  3  4  1  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "63410",
+     "accepted": [
+      "63410",
+      "6,3,4,1,0"
+     ],
+     "explanation": "본 숫자: 6 3 4 1 0"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  7  6  4  5",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "07645",
+     "accepted": [
+      "07645",
+      "0,7,6,4,5"
+     ],
+     "explanation": "본 숫자: 0 7 6 4 5"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  9  4  3  4",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "39434",
+     "accepted": [
+      "39434",
+      "3,9,4,3,4"
+     ],
+     "explanation": "본 숫자: 3 9 4 3 4"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  1  6  0  4",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "41604",
+     "accepted": [
+      "41604",
+      "4,1,6,0,4"
+     ],
+     "explanation": "본 숫자: 4 1 6 0 4"
+    }
+   ]
+  },
+  {
+   "testId": "mem-easy-5",
+   "order": 5,
+   "title": "숫자 기억 · 쉬움 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  7  0  7  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "07073",
+     "accepted": [
+      "07073",
+      "0,7,0,7,3"
+     ],
+     "explanation": "본 숫자: 0 7 0 7 3"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  6  9  4  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "36940",
+     "accepted": [
+      "36940",
+      "3,6,9,4,0"
+     ],
+     "explanation": "본 숫자: 3 6 9 4 0"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  6  5  3  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "46532",
+     "accepted": [
+      "46532",
+      "4,6,5,3,2"
+     ],
+     "explanation": "본 숫자: 4 6 5 3 2"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  4  3  7  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "64372",
+     "accepted": [
+      "64372",
+      "6,4,3,7,2"
+     ],
+     "explanation": "본 숫자: 6 4 3 7 2"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  7  3  4  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "57348",
+     "accepted": [
+      "57348",
+      "5,7,3,4,8"
+     ],
+     "explanation": "본 숫자: 5 7 3 4 8"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  1  4  6  9",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "51469",
+     "accepted": [
+      "51469",
+      "5,1,4,6,9"
+     ],
+     "explanation": "본 숫자: 5 1 4 6 9"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  2  7  5  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "02752",
+     "accepted": [
+      "02752",
+      "0,2,7,5,2"
+     ],
+     "explanation": "본 숫자: 0 2 7 5 2"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  7  4  1  6",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "47416",
+     "accepted": [
+      "47416",
+      "4,7,4,1,6"
+     ],
+     "explanation": "본 숫자: 4 7 4 1 6"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  5  1  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "27510",
+     "accepted": [
+      "27510",
+      "2,7,5,1,0"
+     ],
+     "explanation": "본 숫자: 2 7 5 1 0"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  3  5  7  2",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "03572",
+     "accepted": [
+      "03572",
+      "0,3,5,7,2"
+     ],
+     "explanation": "본 숫자: 0 3 5 7 2"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  1  3  8  4",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "41384",
+     "accepted": [
+      "41384",
+      "4,1,3,8,4"
+     ],
+     "explanation": "본 숫자: 4 1 3 8 4"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  8  0  8  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "08087",
+     "accepted": [
+      "08087",
+      "0,8,0,8,7"
+     ],
+     "explanation": "본 숫자: 0 8 0 8 7"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  4  1  9  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "04193",
+     "accepted": [
+      "04193",
+      "0,4,1,9,3"
+     ],
+     "explanation": "본 숫자: 0 4 1 9 3"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  0  3  5  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "80350",
+     "accepted": [
+      "80350",
+      "8,0,3,5,0"
+     ],
+     "explanation": "본 숫자: 8 0 3 5 0"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  9  0  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "90901",
+     "accepted": [
+      "90901",
+      "9,0,9,0,1"
+     ],
+     "explanation": "본 숫자: 9 0 9 0 1"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  0  9  8  3",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "20983",
+     "accepted": [
+      "20983",
+      "2,0,9,8,3"
+     ],
+     "explanation": "본 숫자: 2 0 9 8 3"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  3  6  4  7",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "03647",
+     "accepted": [
+      "03647",
+      "0,3,6,4,7"
+     ],
+     "explanation": "본 숫자: 0 3 6 4 7"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  7  9  6  1",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "47961",
+     "accepted": [
+      "47961",
+      "4,7,9,6,1"
+     ],
+     "explanation": "본 숫자: 4 7 9 6 1"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  9  3  8",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "92938",
+     "accepted": [
+      "92938",
+      "9,2,9,3,8"
+     ],
+     "explanation": "본 숫자: 9 2 9 3 8"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  2  9  8  0",
+     "memorizeSec": 5,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "42980",
+     "accepted": [
+      "42980",
+      "4,2,9,8,0"
+     ],
+     "explanation": "본 숫자: 4 2 9 8 0"
+    }
+   ]
+  },
+  {
+   "testId": "mem-medium",
+   "order": 6,
+   "title": "숫자 기억 · 보통 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  5  1  4  6  3  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0514632",
+     "accepted": [
+      "0514632",
+      "0,5,1,4,6,3,2"
+     ],
+     "explanation": "본 숫자: 0 5 1 4 6 3 2"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  6  3  5  1  3  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8635135",
+     "accepted": [
+      "8635135",
+      "8,6,3,5,1,3,5"
+     ],
+     "explanation": "본 숫자: 8 6 3 5 1 3 5"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  2  0  5  9  1  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3205913",
+     "accepted": [
+      "3205913",
+      "3,2,0,5,9,1,3"
+     ],
+     "explanation": "본 숫자: 3 2 0 5 9 1 3"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  2  3  1  0  1  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3231017",
+     "accepted": [
+      "3231017",
+      "3,2,3,1,0,1,7"
+     ],
+     "explanation": "본 숫자: 3 2 3 1 0 1 7"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  4  8  7  8  3  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7487831",
+     "accepted": [
+      "7487831",
+      "7,4,8,7,8,3,1"
+     ],
+     "explanation": "본 숫자: 7 4 8 7 8 3 1"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  5  7  0  2  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9157027",
+     "accepted": [
+      "9157027",
+      "9,1,5,7,0,2,7"
+     ],
+     "explanation": "본 숫자: 9 1 5 7 0 2 7"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  6  2  7  9  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9462796",
+     "accepted": [
+      "9462796",
+      "9,4,6,2,7,9,6"
+     ],
+     "explanation": "본 숫자: 9 4 6 2 7 9 6"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  5  3  0  3  8  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8530386",
+     "accepted": [
+      "8530386",
+      "8,5,3,0,3,8,6"
+     ],
+     "explanation": "본 숫자: 8 5 3 0 3 8 6"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  6  3  6  0  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9163608",
+     "accepted": [
+      "9163608",
+      "9,1,6,3,6,0,8"
+     ],
+     "explanation": "본 숫자: 9 1 6 3 6 0 8"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  9  7  0  7  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9097072",
+     "accepted": [
+      "9097072",
+      "9,0,9,7,0,7,2"
+     ],
+     "explanation": "본 숫자: 9 0 9 7 0 7 2"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  4  0  9  1  7  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3409171",
+     "accepted": [
+      "3409171",
+      "3,4,0,9,1,7,1"
+     ],
+     "explanation": "본 숫자: 3 4 0 9 1 7 1"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  5  8  3  1  4  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4583141",
+     "accepted": [
+      "4583141",
+      "4,5,8,3,1,4,1"
+     ],
+     "explanation": "본 숫자: 4 5 8 3 1 4 1"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  8  1  9  6  4  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0819643",
+     "accepted": [
+      "0819643",
+      "0,8,1,9,6,4,3"
+     ],
+     "explanation": "본 숫자: 0 8 1 9 6 4 3"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  1  5  1  8  7  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8151870",
+     "accepted": [
+      "8151870",
+      "8,1,5,1,8,7,0"
+     ],
+     "explanation": "본 숫자: 8 1 5 1 8 7 0"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  9  3  6  7  4  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2936746",
+     "accepted": [
+      "2936746",
+      "2,9,3,6,7,4,6"
+     ],
+     "explanation": "본 숫자: 2 9 3 6 7 4 6"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  4  5  1  7  9  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1451795",
+     "accepted": [
+      "1451795",
+      "1,4,5,1,7,9,5"
+     ],
+     "explanation": "본 숫자: 1 4 5 1 7 9 5"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  3  2  8  1  4  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5328147",
+     "accepted": [
+      "5328147",
+      "5,3,2,8,1,4,7"
+     ],
+     "explanation": "본 숫자: 5 3 2 8 1 4 7"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  7  2  9  5  4  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8729547",
+     "accepted": [
+      "8729547",
+      "8,7,2,9,5,4,7"
+     ],
+     "explanation": "본 숫자: 8 7 2 9 5 4 7"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  8  5  2  0  2  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3852027",
+     "accepted": [
+      "3852027",
+      "3,8,5,2,0,2,7"
+     ],
+     "explanation": "본 숫자: 3 8 5 2 0 2 7"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  9  6  3  2  6  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8963263",
+     "accepted": [
+      "8963263",
+      "8,9,6,3,2,6,3"
+     ],
+     "explanation": "본 숫자: 8 9 6 3 2 6 3"
+    }
+   ]
+  },
+  {
+   "testId": "mem-medium-2",
+   "order": 7,
+   "title": "숫자 기억 · 보통 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  4  7  2  5  0  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2472505",
+     "accepted": [
+      "2472505",
+      "2,4,7,2,5,0,5"
+     ],
+     "explanation": "본 숫자: 2 4 7 2 5 0 5"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  8  6  0  8  5  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9860857",
+     "accepted": [
+      "9860857",
+      "9,8,6,0,8,5,7"
+     ],
+     "explanation": "본 숫자: 9 8 6 0 8 5 7"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  1  3  9  0  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2713905",
+     "accepted": [
+      "2713905",
+      "2,7,1,3,9,0,5"
+     ],
+     "explanation": "본 숫자: 2 7 1 3 9 0 5"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  9  8  6  8  4  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1986849",
+     "accepted": [
+      "1986849",
+      "1,9,8,6,8,4,9"
+     ],
+     "explanation": "본 숫자: 1 9 8 6 8 4 9"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  2  8  9  3  2  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8289329",
+     "accepted": [
+      "8289329",
+      "8,2,8,9,3,2,9"
+     ],
+     "explanation": "본 숫자: 8 2 8 9 3 2 9"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  8  1  8  4  6  4",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3818464",
+     "accepted": [
+      "3818464",
+      "3,8,1,8,4,6,4"
+     ],
+     "explanation": "본 숫자: 3 8 1 8 4 6 4"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  6  3  8  5  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9263850",
+     "accepted": [
+      "9263850",
+      "9,2,6,3,8,5,0"
+     ],
+     "explanation": "본 숫자: 9 2 6 3 8 5 0"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  5  3  5  3  2  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1535320",
+     "accepted": [
+      "1535320",
+      "1,5,3,5,3,2,0"
+     ],
+     "explanation": "본 숫자: 1 5 3 5 3 2 0"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  8  3  7  4  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9483740",
+     "accepted": [
+      "9483740",
+      "9,4,8,3,7,4,0"
+     ],
+     "explanation": "본 숫자: 9 4 8 3 7 4 0"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  8  5  4  2  3  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5854230",
+     "accepted": [
+      "5854230",
+      "5,8,5,4,2,3,0"
+     ],
+     "explanation": "본 숫자: 5 8 5 4 2 3 0"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  7  5  8  2  0  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4758208",
+     "accepted": [
+      "4758208",
+      "4,7,5,8,2,0,8"
+     ],
+     "explanation": "본 숫자: 4 7 5 8 2 0 8"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  3  2  9  0  3  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "6329038",
+     "accepted": [
+      "6329038",
+      "6,3,2,9,0,3,8"
+     ],
+     "explanation": "본 숫자: 6 3 2 9 0 3 8"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  4  0  2  4  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9240249",
+     "accepted": [
+      "9240249",
+      "9,2,4,0,2,4,9"
+     ],
+     "explanation": "본 숫자: 9 2 4 0 2 4 9"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  2  4  9  5  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9424950",
+     "accepted": [
+      "9424950",
+      "9,4,2,4,9,5,0"
+     ],
+     "explanation": "본 숫자: 9 4 2 4 9 5 0"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  2  5  1  4  2  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8251429",
+     "accepted": [
+      "8251429",
+      "8,2,5,1,4,2,9"
+     ],
+     "explanation": "본 숫자: 8 2 5 1 4 2 9"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  0  7  8  5  2  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "6078521",
+     "accepted": [
+      "6078521",
+      "6,0,7,8,5,2,1"
+     ],
+     "explanation": "본 숫자: 6 0 7 8 5 2 1"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  6  5  3  4  9  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8653498",
+     "accepted": [
+      "8653498",
+      "8,6,5,3,4,9,8"
+     ],
+     "explanation": "본 숫자: 8 6 5 3 4 9 8"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  9  5  1  7  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2795179",
+     "accepted": [
+      "2795179",
+      "2,7,9,5,1,7,9"
+     ],
+     "explanation": "본 숫자: 2 7 9 5 1 7 9"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  9  5  3  9  5  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "6953958",
+     "accepted": [
+      "6953958",
+      "6,9,5,3,9,5,8"
+     ],
+     "explanation": "본 숫자: 6 9 5 3 9 5 8"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  3  8  1  4  9  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4381493",
+     "accepted": [
+      "4381493",
+      "4,3,8,1,4,9,3"
+     ],
+     "explanation": "본 숫자: 4 3 8 1 4 9 3"
+    }
+   ]
+  },
+  {
+   "testId": "mem-medium-3",
+   "order": 8,
+   "title": "숫자 기억 · 보통 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  9  4  8  6  7  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1948670",
+     "accepted": [
+      "1948670",
+      "1,9,4,8,6,7,0"
+     ],
+     "explanation": "본 숫자: 1 9 4 8 6 7 0"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  6  0  4  6  5  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2604652",
+     "accepted": [
+      "2604652",
+      "2,6,0,4,6,5,2"
+     ],
+     "explanation": "본 숫자: 2 6 0 4 6 5 2"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  6  9  3  8  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9069387",
+     "accepted": [
+      "9069387",
+      "9,0,6,9,3,8,7"
+     ],
+     "explanation": "본 숫자: 9 0 6 9 3 8 7"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  1  7  2  8  5  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2172856",
+     "accepted": [
+      "2172856",
+      "2,1,7,2,8,5,6"
+     ],
+     "explanation": "본 숫자: 2 1 7 2 8 5 6"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  9  2  9  5  8  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1929583",
+     "accepted": [
+      "1929583",
+      "1,9,2,9,5,8,3"
+     ],
+     "explanation": "본 숫자: 1 9 2 9 5 8 3"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  4  5  8  9  4  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2458947",
+     "accepted": [
+      "2458947",
+      "2,4,5,8,9,4,7"
+     ],
+     "explanation": "본 숫자: 2 4 5 8 9 4 7"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  4  9  1  6  2  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5491626",
+     "accepted": [
+      "5491626",
+      "5,4,9,1,6,2,6"
+     ],
+     "explanation": "본 숫자: 5 4 9 1 6 2 6"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  1  9  5  6  2  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "6195620",
+     "accepted": [
+      "6195620",
+      "6,1,9,5,6,2,0"
+     ],
+     "explanation": "본 숫자: 6 1 9 5 6 2 0"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  8  6  0  4  1  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1860419",
+     "accepted": [
+      "1860419",
+      "1,8,6,0,4,1,9"
+     ],
+     "explanation": "본 숫자: 1 8 6 0 4 1 9"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  3  1  4  0  6  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2314065",
+     "accepted": [
+      "2314065",
+      "2,3,1,4,0,6,5"
+     ],
+     "explanation": "본 숫자: 2 3 1 4 0 6 5"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  9  0  5  6  3  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3905637",
+     "accepted": [
+      "3905637",
+      "3,9,0,5,6,3,7"
+     ],
+     "explanation": "본 숫자: 3 9 0 5 6 3 7"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  0  9  3  8  4  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7093845",
+     "accepted": [
+      "7093845",
+      "7,0,9,3,8,4,5"
+     ],
+     "explanation": "본 숫자: 7 0 9 3 8 4 5"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  2  5  2  7  6  4",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7252764",
+     "accepted": [
+      "7252764",
+      "7,2,5,2,7,6,4"
+     ],
+     "explanation": "본 숫자: 7 2 5 2 7 6 4"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  2  4  7  1  0  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3247103",
+     "accepted": [
+      "3247103",
+      "3,2,4,7,1,0,3"
+     ],
+     "explanation": "본 숫자: 3 2 4 7 1 0 3"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  7  1  6  5  2  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5716523",
+     "accepted": [
+      "5716523",
+      "5,7,1,6,5,2,3"
+     ],
+     "explanation": "본 숫자: 5 7 1 6 5 2 3"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  4  5  9  1  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9145917",
+     "accepted": [
+      "9145917",
+      "9,1,4,5,9,1,7"
+     ],
+     "explanation": "본 숫자: 9 1 4 5 9 1 7"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  3  8  9  5  9  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7389597",
+     "accepted": [
+      "7389597",
+      "7,3,8,9,5,9,7"
+     ],
+     "explanation": "본 숫자: 7 3 8 9 5 9 7"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  3  5  9  1  4  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7359145",
+     "accepted": [
+      "7359145",
+      "7,3,5,9,1,4,5"
+     ],
+     "explanation": "본 숫자: 7 3 5 9 1 4 5"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  1  0  8  9  3  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7108932",
+     "accepted": [
+      "7108932",
+      "7,1,0,8,9,3,2"
+     ],
+     "explanation": "본 숫자: 7 1 0 8 9 3 2"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  8  6  5  6  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9286560",
+     "accepted": [
+      "9286560",
+      "9,2,8,6,5,6,0"
+     ],
+     "explanation": "본 숫자: 9 2 8 6 5 6 0"
+    }
+   ]
+  },
+  {
+   "testId": "mem-medium-4",
+   "order": 9,
+   "title": "숫자 기억 · 보통 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  6  0  8  9  7  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2608979",
+     "accepted": [
+      "2608979",
+      "2,6,0,8,9,7,9"
+     ],
+     "explanation": "본 숫자: 2 6 0 8 9 7 9"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  7  9  0  8  1  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3790812",
+     "accepted": [
+      "3790812",
+      "3,7,9,0,8,1,2"
+     ],
+     "explanation": "본 숫자: 3 7 9 0 8 1 2"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  2  3  5  1  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8423512",
+     "accepted": [
+      "8423512",
+      "8,4,2,3,5,1,2"
+     ],
+     "explanation": "본 숫자: 8 4 2 3 5 1 2"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  6  8  0  5  6",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2768056",
+     "accepted": [
+      "2768056",
+      "2,7,6,8,0,5,6"
+     ],
+     "explanation": "본 숫자: 2 7 6 8 0 5 6"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  6  9  7  2  3  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8697230",
+     "accepted": [
+      "8697230",
+      "8,6,9,7,2,3,0"
+     ],
+     "explanation": "본 숫자: 8 6 9 7 2 3 0"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  2  1  8  0  6  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0218063",
+     "accepted": [
+      "0218063",
+      "0,2,1,8,0,6,3"
+     ],
+     "explanation": "본 숫자: 0 2 1 8 0 6 3"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  5  7  6  4  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8457641",
+     "accepted": [
+      "8457641",
+      "8,4,5,7,6,4,1"
+     ],
+     "explanation": "본 숫자: 8 4 5 7 6 4 1"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  6  9  4  7  0  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0694705",
+     "accepted": [
+      "0694705",
+      "0,6,9,4,7,0,5"
+     ],
+     "explanation": "본 숫자: 0 6 9 4 7 0 5"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  7  3  5  4  7  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1735478",
+     "accepted": [
+      "1735478",
+      "1,7,3,5,4,7,8"
+     ],
+     "explanation": "본 숫자: 1 7 3 5 4 7 8"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  8  0  7  5  6  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3807569",
+     "accepted": [
+      "3807569",
+      "3,8,0,7,5,6,9"
+     ],
+     "explanation": "본 숫자: 3 8 0 7 5 6 9"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  9  2  1  9  6  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1921962",
+     "accepted": [
+      "1921962",
+      "1,9,2,1,9,6,2"
+     ],
+     "explanation": "본 숫자: 1 9 2 1 9 6 2"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  0  4  0  2  9  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4040295",
+     "accepted": [
+      "4040295",
+      "4,0,4,0,2,9,5"
+     ],
+     "explanation": "본 숫자: 4 0 4 0 2 9 5"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  1  9  5  3  2  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2195327",
+     "accepted": [
+      "2195327",
+      "2,1,9,5,3,2,7"
+     ],
+     "explanation": "본 숫자: 2 1 9 5 3 2 7"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  6  8  4  9  3  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4684937",
+     "accepted": [
+      "4684937",
+      "4,6,8,4,9,3,7"
+     ],
+     "explanation": "본 숫자: 4 6 8 4 9 3 7"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  0  7  6  0  4  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5076047",
+     "accepted": [
+      "5076047",
+      "5,0,7,6,0,4,7"
+     ],
+     "explanation": "본 숫자: 5 0 7 6 0 4 7"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  0  9  7  5  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9409751",
+     "accepted": [
+      "9409751",
+      "9,4,0,9,7,5,1"
+     ],
+     "explanation": "본 숫자: 9 4 0 9 7 5 1"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  8  6  8  1  7  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1868173",
+     "accepted": [
+      "1868173",
+      "1,8,6,8,1,7,3"
+     ],
+     "explanation": "본 숫자: 1 8 6 8 1 7 3"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  3  5  3  7  5  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7353752",
+     "accepted": [
+      "7353752",
+      "7,3,5,3,7,5,2"
+     ],
+     "explanation": "본 숫자: 7 3 5 3 7 5 2"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  1  5  3  8  2  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "7153825",
+     "accepted": [
+      "7153825",
+      "7,1,5,3,8,2,5"
+     ],
+     "explanation": "본 숫자: 7 1 5 3 8 2 5"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  4  9  1  3  9  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0491390",
+     "accepted": [
+      "0491390",
+      "0,4,9,1,3,9,0"
+     ],
+     "explanation": "본 숫자: 0 4 9 1 3 9 0"
+    }
+   ]
+  },
+  {
+   "testId": "mem-medium-5",
+   "order": 10,
+   "title": "숫자 기억 · 보통 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  3  2  5  4  1  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9325417",
+     "accepted": [
+      "9325417",
+      "9,3,2,5,4,1,7"
+     ],
+     "explanation": "본 숫자: 9 3 2 5 4 1 7"
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  3  5  1  3  2  8",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0351328",
+     "accepted": [
+      "0351328",
+      "0,3,5,1,3,2,8"
+     ],
+     "explanation": "본 숫자: 0 3 5 1 3 2 8"
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  9  0  9  2  4  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0909245",
+     "accepted": [
+      "0909245",
+      "0,9,0,9,2,4,5"
+     ],
+     "explanation": "본 숫자: 0 9 0 9 2 4 5"
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  5  4  2  3  8  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9542382",
+     "accepted": [
+      "9542382",
+      "9,5,4,2,3,8,2"
+     ],
+     "explanation": "본 숫자: 9 5 4 2 3 8 2"
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  4  2  0  7  1  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5420719",
+     "accepted": [
+      "5420719",
+      "5,4,2,0,7,1,9"
+     ],
+     "explanation": "본 숫자: 5 4 2 0 7 1 9"
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  5  1  4  3  8  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8514381",
+     "accepted": [
+      "8514381",
+      "8,5,1,4,3,8,1"
+     ],
+     "explanation": "본 숫자: 8 5 1 4 3 8 1"
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  3  9  5  1  9  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "0395192",
+     "accepted": [
+      "0395192",
+      "0,3,9,5,1,9,2"
+     ],
+     "explanation": "본 숫자: 0 3 9 5 1 9 2"
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  4  1  9  0  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9241901",
+     "accepted": [
+      "9241901",
+      "9,2,4,1,9,0,1"
+     ],
+     "explanation": "본 숫자: 9 2 4 1 9 0 1"
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  8  1  2  1  6  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4812162",
+     "accepted": [
+      "4812162",
+      "4,8,1,2,1,6,2"
+     ],
+     "explanation": "본 숫자: 4 8 1 2 1 6 2"
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  5  0  9  1  7  0",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "2509170",
+     "accepted": [
+      "2509170",
+      "2,5,0,9,1,7,0"
+     ],
+     "explanation": "본 숫자: 2 5 0 9 1 7 0"
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  2  4  9  7  8  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "6249787",
+     "accepted": [
+      "6249787",
+      "6,2,4,9,7,8,7"
+     ],
+     "explanation": "본 숫자: 6 2 4 9 7 8 7"
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  2  7  0  1  0  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8270103",
+     "accepted": [
+      "8270103",
+      "8,2,7,0,1,0,3"
+     ],
+     "explanation": "본 숫자: 8 2 7 0 1 0 3"
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  8  6  3  0  1  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "9863015",
+     "accepted": [
+      "9863015",
+      "9,8,6,3,0,1,5"
+     ],
+     "explanation": "본 숫자: 9 8 6 3 0 1 5"
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  0  3  1  5  4  5",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4031545",
+     "accepted": [
+      "4031545",
+      "4,0,3,1,5,4,5"
+     ],
+     "explanation": "본 숫자: 4 0 3 1 5 4 5"
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  4  6  4  3  8  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1464382",
+     "accepted": [
+      "1464382",
+      "1,4,6,4,3,8,2"
+     ],
+     "explanation": "본 숫자: 1 4 6 4 3 8 2"
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  9  6  0  5  0  7",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "3960507",
+     "accepted": [
+      "3960507",
+      "3,9,6,0,5,0,7"
+     ],
+     "explanation": "본 숫자: 3 9 6 0 5 0 7"
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  8  3  1  6  0  3",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "4831603",
+     "accepted": [
+      "4831603",
+      "4,8,3,1,6,0,3"
+     ],
+     "explanation": "본 숫자: 4 8 3 1 6 0 3"
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  5  2  4  9  5  9",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "1524959",
+     "accepted": [
+      "1524959",
+      "1,5,2,4,9,5,9"
+     ],
+     "explanation": "본 숫자: 1 5 2 4 9 5 9"
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  3  0  3  4  9  1",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "8303491",
+     "accepted": [
+      "8303491",
+      "8,3,0,3,4,9,1"
+     ],
+     "explanation": "본 숫자: 8 3 0 3 4 9 1"
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  6  5  1  2  1  2",
+     "memorizeSec": 7,
+     "recall": "방금 본 숫자를 본 순서대로 입력하시오.",
+     "answer": "5651212",
+     "accepted": [
+      "5651212",
+      "5,6,5,1,2,1,2"
+     ],
+     "explanation": "본 숫자: 5 6 5 1 2 1 2"
+    }
+   ]
+  },
+  {
+   "testId": "mem-hard",
+   "order": 11,
+   "title": "숫자 기억 · 어려움 1",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  0  5  6  0  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "606503",
+     "accepted": [
+      "606503",
+      "6,0,6,5,0,3"
+     ],
+     "explanation": "본 숫자 3 0 5 6 0 6을 거꾸로 쓰면 606503."
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  6  0  2  1  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "512062",
+     "accepted": [
+      "512062",
+      "5,1,2,0,6,2"
+     ],
+     "explanation": "본 숫자 2 6 0 2 1 5를 거꾸로 쓰면 512062."
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  9  1  8  5  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "158198",
+     "accepted": [
+      "158198",
+      "1,5,8,1,9,8"
+     ],
+     "explanation": "본 숫자 8 9 1 8 5 1을 거꾸로 쓰면 158198."
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  6  9  7  6  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "467963",
+     "accepted": [
+      "467963",
+      "4,6,7,9,6,3"
+     ],
+     "explanation": "본 숫자 3 6 9 7 6 4를 거꾸로 쓰면 467963."
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  6  1  9  7  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "679169",
+     "accepted": [
+      "679169",
+      "6,7,9,1,6,9"
+     ],
+     "explanation": "본 숫자 9 6 1 9 7 6을 거꾸로 쓰면 679169."
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  6  8  0  5  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "650867",
+     "accepted": [
+      "650867",
+      "6,5,0,8,6,7"
+     ],
+     "explanation": "본 숫자 7 6 8 0 5 6을 거꾸로 쓰면 650867."
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  1  2  8  9  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "198216",
+     "accepted": [
+      "198216",
+      "1,9,8,2,1,6"
+     ],
+     "explanation": "본 숫자 6 1 2 8 9 1을 거꾸로 쓰면 198216."
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  6  4  6  2  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "326465",
+     "accepted": [
+      "326465",
+      "3,2,6,4,6,5"
+     ],
+     "explanation": "본 숫자 5 6 4 6 2 3을 거꾸로 쓰면 326465."
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  2  3  9  7  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "679324",
+     "accepted": [
+      "679324",
+      "6,7,9,3,2,4"
+     ],
+     "explanation": "본 숫자 4 2 3 9 7 6을 거꾸로 쓰면 679324."
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  9  2  0  7  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "270290",
+     "accepted": [
+      "270290",
+      "2,7,0,2,9,0"
+     ],
+     "explanation": "본 숫자 0 9 2 0 7 2를 거꾸로 쓰면 270290."
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  0  2  6  0  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "806205",
+     "accepted": [
+      "806205",
+      "8,0,6,2,0,5"
+     ],
+     "explanation": "본 숫자 5 0 2 6 0 8을 거꾸로 쓰면 806205."
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  8  4  9  2  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "329483",
+     "accepted": [
+      "329483",
+      "3,2,9,4,8,3"
+     ],
+     "explanation": "본 숫자 3 8 4 9 2 3을 거꾸로 쓰면 329483."
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  3  6  4  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "346329",
+     "accepted": [
+      "346329",
+      "3,4,6,3,2,9"
+     ],
+     "explanation": "본 숫자 9 2 3 6 4 3을 거꾸로 쓰면 346329."
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  5  9  1  0  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "701954",
+     "accepted": [
+      "701954",
+      "7,0,1,9,5,4"
+     ],
+     "explanation": "본 숫자 4 5 9 1 0 7을 거꾸로 쓰면 701954."
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  9  4  3  5  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "653496",
+     "accepted": [
+      "653496",
+      "6,5,3,4,9,6"
+     ],
+     "explanation": "본 숫자 6 9 4 3 5 6을 거꾸로 쓰면 653496."
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  0  5  0  7  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "870503",
+     "accepted": [
+      "870503",
+      "8,7,0,5,0,3"
+     ],
+     "explanation": "본 숫자 3 0 5 0 7 8을 거꾸로 쓰면 870503."
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  4  1  6  3  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "836147",
+     "accepted": [
+      "836147",
+      "8,3,6,1,4,7"
+     ],
+     "explanation": "본 숫자 7 4 1 6 3 8을 거꾸로 쓰면 836147."
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  2  3  6  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "063248",
+     "accepted": [
+      "063248",
+      "0,6,3,2,4,8"
+     ],
+     "explanation": "본 숫자 8 4 2 3 6 0을 거꾸로 쓰면 063248."
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  3  6  9  5  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "159632",
+     "accepted": [
+      "159632",
+      "1,5,9,6,3,2"
+     ],
+     "explanation": "본 숫자 2 3 6 9 5 1을 거꾸로 쓰면 159632."
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  5  3  7  8  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "787350",
+     "accepted": [
+      "787350",
+      "7,8,7,3,5,0"
+     ],
+     "explanation": "본 숫자 0 5 3 7 8 7을 거꾸로 쓰면 787350."
+    }
+   ]
+  },
+  {
+   "testId": "mem-hard-2",
+   "order": 12,
+   "title": "숫자 기억 · 어려움 2",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  8  3  8  1  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "318389",
+     "accepted": [
+      "318389",
+      "3,1,8,3,8,9"
+     ],
+     "explanation": "본 숫자 9 8 3 8 1 3을 거꾸로 쓰면 318389."
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  5  8  9  2  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "529850",
+     "accepted": [
+      "529850",
+      "5,2,9,8,5,0"
+     ],
+     "explanation": "본 숫자 0 5 8 9 2 5를 거꾸로 쓰면 529850."
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  5  9  3  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "439549",
+     "accepted": [
+      "439549",
+      "4,3,9,5,4,9"
+     ],
+     "explanation": "본 숫자 9 4 5 9 3 4를 거꾸로 쓰면 439549."
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  2  3  7  9  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "497326",
+     "accepted": [
+      "497326",
+      "4,9,7,3,2,6"
+     ],
+     "explanation": "본 숫자 6 2 3 7 9 4를 거꾸로 쓰면 497326."
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  4  3  5  8  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "985348",
+     "accepted": [
+      "985348",
+      "9,8,5,3,4,8"
+     ],
+     "explanation": "본 숫자 8 4 3 5 8 9를 거꾸로 쓰면 985348."
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  1  0  2  7  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "972017",
+     "accepted": [
+      "972017",
+      "9,7,2,0,1,7"
+     ],
+     "explanation": "본 숫자 7 1 0 2 7 9를 거꾸로 쓰면 972017."
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  1  7  3  4  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "943710",
+     "accepted": [
+      "943710",
+      "9,4,3,7,1,0"
+     ],
+     "explanation": "본 숫자 0 1 7 3 4 9를 거꾸로 쓰면 943710."
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  8  0  9  2  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "629080",
+     "accepted": [
+      "629080",
+      "6,2,9,0,8,0"
+     ],
+     "explanation": "본 숫자 0 8 0 9 2 6을 거꾸로 쓰면 629080."
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  7  3  5  6  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "465370",
+     "accepted": [
+      "465370",
+      "4,6,5,3,7,0"
+     ],
+     "explanation": "본 숫자 0 7 3 5 6 4를 거꾸로 쓰면 465370."
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  3  1  4  6  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "164134",
+     "accepted": [
+      "164134",
+      "1,6,4,1,3,4"
+     ],
+     "explanation": "본 숫자 4 3 1 4 6 1을 거꾸로 쓰면 164134."
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  0  2  3  9  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "593208",
+     "accepted": [
+      "593208",
+      "5,9,3,2,0,8"
+     ],
+     "explanation": "본 숫자 8 0 2 3 9 5를 거꾸로 쓰면 593208."
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  2  1  4  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "641219",
+     "accepted": [
+      "641219",
+      "6,4,1,2,1,9"
+     ],
+     "explanation": "본 숫자 9 1 2 1 4 6을 거꾸로 쓰면 641219."
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  5  9  0  1  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "910954",
+     "accepted": [
+      "910954",
+      "9,1,0,9,5,4"
+     ],
+     "explanation": "본 숫자 4 5 9 0 1 9를 거꾸로 쓰면 910954."
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  4  9  7  4  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "347947",
+     "accepted": [
+      "347947",
+      "3,4,7,9,4,7"
+     ],
+     "explanation": "본 숫자 7 4 9 7 4 3을 거꾸로 쓰면 347947."
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  6  8  2  6  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "062861",
+     "accepted": [
+      "062861",
+      "0,6,2,8,6,1"
+     ],
+     "explanation": "본 숫자 1 6 8 2 6 0을 거꾸로 쓰면 062861."
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  6  3  1  5  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "851362",
+     "accepted": [
+      "851362",
+      "8,5,1,3,6,2"
+     ],
+     "explanation": "본 숫자 2 6 3 1 5 8을 거꾸로 쓰면 851362."
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  5  0  9  6  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "269053",
+     "accepted": [
+      "269053",
+      "2,6,9,0,5,3"
+     ],
+     "explanation": "본 숫자 3 5 0 9 6 2를 거꾸로 쓰면 269053."
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  5  0  1  0  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "801058",
+     "accepted": [
+      "801058",
+      "8,0,1,0,5,8"
+     ],
+     "explanation": "본 숫자 8 5 0 1 0 8을 거꾸로 쓰면 801058."
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  4  7  8  2  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "328742",
+     "accepted": [
+      "328742",
+      "3,2,8,7,4,2"
+     ],
+     "explanation": "본 숫자 2 4 7 8 2 3을 거꾸로 쓰면 328742."
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  2  7  0  3  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "430726",
+     "accepted": [
+      "430726",
+      "4,3,0,7,2,6"
+     ],
+     "explanation": "본 숫자 6 2 7 0 3 4를 거꾸로 쓰면 430726."
+    }
+   ]
+  },
+  {
+   "testId": "mem-hard-3",
+   "order": 13,
+   "title": "숫자 기억 · 어려움 3",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  4  5  0  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "105419",
+     "accepted": [
+      "105419",
+      "1,0,5,4,1,9"
+     ],
+     "explanation": "본 숫자 9 1 4 5 0 1을 거꾸로 쓰면 105419."
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  1  6  2  5  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "752614",
+     "accepted": [
+      "752614",
+      "7,5,2,6,1,4"
+     ],
+     "explanation": "본 숫자 4 1 6 2 5 7을 거꾸로 쓰면 752614."
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  5  8  1  3  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "031851",
+     "accepted": [
+      "031851",
+      "0,3,1,8,5,1"
+     ],
+     "explanation": "본 숫자 1 5 8 1 3 0을 거꾸로 쓰면 031851."
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  7  2  0  9  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "190279",
+     "accepted": [
+      "190279",
+      "1,9,0,2,7,9"
+     ],
+     "explanation": "본 숫자 9 7 2 0 9 1을 거꾸로 쓰면 190279."
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  8  7  2  1  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "412784",
+     "accepted": [
+      "412784",
+      "4,1,2,7,8,4"
+     ],
+     "explanation": "본 숫자 4 8 7 2 1 4를 거꾸로 쓰면 412784."
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  3  1  4  9  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "394132",
+     "accepted": [
+      "394132",
+      "3,9,4,1,3,2"
+     ],
+     "explanation": "본 숫자 2 3 1 4 9 3을 거꾸로 쓰면 394132."
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  2  8  2  4  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "042824",
+     "accepted": [
+      "042824",
+      "0,4,2,8,2,4"
+     ],
+     "explanation": "본 숫자 4 2 8 2 4 0을 거꾸로 쓰면 042824."
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n1  9  5  9  1  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "319591",
+     "accepted": [
+      "319591",
+      "3,1,9,5,9,1"
+     ],
+     "explanation": "본 숫자 1 9 5 9 1 3을 거꾸로 쓰면 319591."
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  4  5  4  8  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "684542",
+     "accepted": [
+      "684542",
+      "6,8,4,5,4,2"
+     ],
+     "explanation": "본 숫자 2 4 5 4 8 6을 거꾸로 쓰면 684542."
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  7  8  2  6  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "362875",
+     "accepted": [
+      "362875",
+      "3,6,2,8,7,5"
+     ],
+     "explanation": "본 숫자 5 7 8 2 6 3을 거꾸로 쓰면 362875."
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  8  9  1  7  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "071986",
+     "accepted": [
+      "071986",
+      "0,7,1,9,8,6"
+     ],
+     "explanation": "본 숫자 6 8 9 1 7 0을 거꾸로 쓰면 071986."
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  7  3  1  8  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "981373",
+     "accepted": [
+      "981373",
+      "9,8,1,3,7,3"
+     ],
+     "explanation": "본 숫자 3 7 3 1 8 9를 거꾸로 쓰면 981373."
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  2  0  9  1  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "819027",
+     "accepted": [
+      "819027",
+      "8,1,9,0,2,7"
+     ],
+     "explanation": "본 숫자 7 2 0 9 1 8을 거꾸로 쓰면 819027."
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  8  0  8  1  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "718084",
+     "accepted": [
+      "718084",
+      "7,1,8,0,8,4"
+     ],
+     "explanation": "본 숫자 4 8 0 8 1 7을 거꾸로 쓰면 718084."
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  8  7  9  7  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "679785",
+     "accepted": [
+      "679785",
+      "6,7,9,7,8,5"
+     ],
+     "explanation": "본 숫자 5 8 7 9 7 6을 거꾸로 쓰면 679785."
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  9  1  9  0  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "209194",
+     "accepted": [
+      "209194",
+      "2,0,9,1,9,4"
+     ],
+     "explanation": "본 숫자 4 9 1 9 0 2를 거꾸로 쓰면 209194."
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  0  3  0  1  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "710309",
+     "accepted": [
+      "710309",
+      "7,1,0,3,0,9"
+     ],
+     "explanation": "본 숫자 9 0 3 0 1 7을 거꾸로 쓰면 710309."
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  0  2  8  4  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "248205",
+     "accepted": [
+      "248205",
+      "2,4,8,2,0,5"
+     ],
+     "explanation": "본 숫자 5 0 2 8 4 2를 거꾸로 쓰면 248205."
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  8  6  7  6  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "267685",
+     "accepted": [
+      "267685",
+      "2,6,7,6,8,5"
+     ],
+     "explanation": "본 숫자 5 8 6 7 6 2를 거꾸로 쓰면 267685."
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  2  8  6  7  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "176829",
+     "accepted": [
+      "176829",
+      "1,7,6,8,2,9"
+     ],
+     "explanation": "본 숫자 9 2 8 6 7 1을 거꾸로 쓰면 176829."
+    }
+   ]
+  },
+  {
+   "testId": "mem-hard-4",
+   "order": 14,
+   "title": "숫자 기억 · 어려움 4",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  6  7  3  0  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "503760",
+     "accepted": [
+      "503760",
+      "5,0,3,7,6,0"
+     ],
+     "explanation": "본 숫자 0 6 7 3 0 5를 거꾸로 쓰면 503760."
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  2  1  6  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "761272",
+     "accepted": [
+      "761272",
+      "7,6,1,2,7,2"
+     ],
+     "explanation": "본 숫자 2 7 2 1 6 7을 거꾸로 쓰면 761272."
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  6  1  2  0  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "702162",
+     "accepted": [
+      "702162",
+      "7,0,2,1,6,2"
+     ],
+     "explanation": "본 숫자 2 6 1 2 0 7을 거꾸로 쓰면 702162."
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  0  1  3  0  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "503102",
+     "accepted": [
+      "503102",
+      "5,0,3,1,0,2"
+     ],
+     "explanation": "본 숫자 2 0 1 3 0 5를 거꾸로 쓰면 503102."
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  0  3  1  2  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "821307",
+     "accepted": [
+      "821307",
+      "8,2,1,3,0,7"
+     ],
+     "explanation": "본 숫자 7 0 3 1 2 8을 거꾸로 쓰면 821307."
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  2  9  3  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "439272",
+     "accepted": [
+      "439272",
+      "4,3,9,2,7,2"
+     ],
+     "explanation": "본 숫자 2 7 2 9 3 4를 거꾸로 쓰면 439272."
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  1  6  5  6  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "465610",
+     "accepted": [
+      "465610",
+      "4,6,5,6,1,0"
+     ],
+     "explanation": "본 숫자 0 1 6 5 6 4를 거꾸로 쓰면 465610."
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  6  9  7  2  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "127969",
+     "accepted": [
+      "127969",
+      "1,2,7,9,6,9"
+     ],
+     "explanation": "본 숫자 9 6 9 7 2 1을 거꾸로 쓰면 127969."
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  5  0  1  4  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "741053",
+     "accepted": [
+      "741053",
+      "7,4,1,0,5,3"
+     ],
+     "explanation": "본 숫자 3 5 0 1 4 7을 거꾸로 쓰면 741053."
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  5  2  5  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "252549",
+     "accepted": [
+      "252549",
+      "2,5,2,5,4,9"
+     ],
+     "explanation": "본 숫자 9 4 5 2 5 2를 거꾸로 쓰면 252549."
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  5  7  0  5  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "050753",
+     "accepted": [
+      "050753",
+      "0,5,0,7,5,3"
+     ],
+     "explanation": "본 숫자 3 5 7 0 5 0을 거꾸로 쓰면 050753."
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  4  5  2  5  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "152540",
+     "accepted": [
+      "152540",
+      "1,5,2,5,4,0"
+     ],
+     "explanation": "본 숫자 0 4 5 2 5 1을 거꾸로 쓰면 152540."
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  5  2  9  7  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "879254",
+     "accepted": [
+      "879254",
+      "8,7,9,2,5,4"
+     ],
+     "explanation": "본 숫자 4 5 2 9 7 8을 거꾸로 쓰면 879254."
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  8  9  3  5  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "253980",
+     "accepted": [
+      "253980",
+      "2,5,3,9,8,0"
+     ],
+     "explanation": "본 숫자 0 8 9 3 5 2를 거꾸로 쓰면 253980."
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  7  6  4  2  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "524672",
+     "accepted": [
+      "524672",
+      "5,2,4,6,7,2"
+     ],
+     "explanation": "본 숫자 2 7 6 4 2 5를 거꾸로 쓰면 524672."
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  8  7  5  4  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "545780",
+     "accepted": [
+      "545780",
+      "5,4,5,7,8,0"
+     ],
+     "explanation": "본 숫자 0 8 7 5 4 5를 거꾸로 쓰면 545780."
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  5  9  5  0  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "105952",
+     "accepted": [
+      "105952",
+      "1,0,5,9,5,2"
+     ],
+     "explanation": "본 숫자 2 5 9 5 0 1을 거꾸로 쓰면 105952."
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  5  0  8  9  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "398056",
+     "accepted": [
+      "398056",
+      "3,9,8,0,5,6"
+     ],
+     "explanation": "본 숫자 6 5 0 8 9 3을 거꾸로 쓰면 398056."
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n0  5  7  3  2  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "723750",
+     "accepted": [
+      "723750",
+      "7,2,3,7,5,0"
+     ],
+     "explanation": "본 숫자 0 5 7 3 2 7을 거꾸로 쓰면 723750."
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  0  4  1  3  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "531404",
+     "accepted": [
+      "531404",
+      "5,3,1,4,0,4"
+     ],
+     "explanation": "본 숫자 4 0 4 1 3 5를 거꾸로 쓰면 531404."
+    }
+   ]
+  },
+  {
+   "testId": "mem-hard-5",
+   "order": 15,
+   "title": "숫자 기억 · 어려움 5",
+   "questionCount": 20,
+   "questions": [
+    {
+     "n": 1,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  2  7  2  9  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "692728",
+     "accepted": [
+      "692728",
+      "6,9,2,7,2,8"
+     ],
+     "explanation": "본 숫자 8 2 7 2 9 6을 거꾸로 쓰면 692728."
+    },
+    {
+     "n": 2,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  8  4  1  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "814849",
+     "accepted": [
+      "814849",
+      "8,1,4,8,4,9"
+     ],
+     "explanation": "본 숫자 9 4 8 4 1 8을 거꾸로 쓰면 814849."
+    },
+    {
+     "n": 3,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  1  4  0  6  4",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "460419",
+     "accepted": [
+      "460419",
+      "4,6,0,4,1,9"
+     ],
+     "explanation": "본 숫자 9 1 4 0 6 4를 거꾸로 쓰면 460419."
+    },
+    {
+     "n": 4,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  5  0  3  2  7",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "723057",
+     "accepted": [
+      "723057",
+      "7,2,3,0,5,7"
+     ],
+     "explanation": "본 숫자 7 5 0 3 2 7을 거꾸로 쓰면 723057."
+    },
+    {
+     "n": 5,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  3  8  0  8  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "680834",
+     "accepted": [
+      "680834",
+      "6,8,0,8,3,4"
+     ],
+     "explanation": "본 숫자 4 3 8 0 8 6을 거꾸로 쓰면 680834."
+    },
+    {
+     "n": 6,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  9  3  9  7  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "379394",
+     "accepted": [
+      "379394",
+      "3,7,9,3,9,4"
+     ],
+     "explanation": "본 숫자 4 9 3 9 7 3을 거꾸로 쓰면 379394."
+    },
+    {
+     "n": 7,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  0  4  8  7  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "878403",
+     "accepted": [
+      "878403",
+      "8,7,8,4,0,3"
+     ],
+     "explanation": "본 숫자 3 0 4 8 7 8을 거꾸로 쓰면 878403."
+    },
+    {
+     "n": 8,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  1  8  3  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "838149",
+     "accepted": [
+      "838149",
+      "8,3,8,1,4,9"
+     ],
+     "explanation": "본 숫자 9 4 1 8 3 8을 거꾸로 쓰면 838149."
+    },
+    {
+     "n": 9,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  5  6  8  4  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "548653",
+     "accepted": [
+      "548653",
+      "5,4,8,6,5,3"
+     ],
+     "explanation": "본 숫자 3 5 6 8 4 5를 거꾸로 쓰면 548653."
+    },
+    {
+     "n": 10,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n9  4  3  5  0  9",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "905349",
+     "accepted": [
+      "905349",
+      "9,0,5,3,4,9"
+     ],
+     "explanation": "본 숫자 9 4 3 5 0 9를 거꾸로 쓰면 905349."
+    },
+    {
+     "n": 11,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  1  8  4  7  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "674818",
+     "accepted": [
+      "674818",
+      "6,7,4,8,1,8"
+     ],
+     "explanation": "본 숫자 8 1 8 4 7 6을 거꾸로 쓰면 674818."
+    },
+    {
+     "n": 12,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  5  4  2  6  1",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "162452",
+     "accepted": [
+      "162452",
+      "1,6,2,4,5,2"
+     ],
+     "explanation": "본 숫자 2 5 4 2 6 1을 거꾸로 쓰면 162452."
+    },
+    {
+     "n": 13,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  1  6  4  5  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "854616",
+     "accepted": [
+      "854616",
+      "8,5,4,6,1,6"
+     ],
+     "explanation": "본 숫자 6 1 6 4 5 8을 거꾸로 쓰면 854616."
+    },
+    {
+     "n": 14,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n6  2  4  0  3  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "630426",
+     "accepted": [
+      "630426",
+      "6,3,0,4,2,6"
+     ],
+     "explanation": "본 숫자 6 2 4 0 3 6을 거꾸로 쓰면 630426."
+    },
+    {
+     "n": 15,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n2  4  9  5  3  5",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "535942",
+     "accepted": [
+      "535942",
+      "5,3,5,9,4,2"
+     ],
+     "explanation": "본 숫자 2 4 9 5 3 5를 거꾸로 쓰면 535942."
+    },
+    {
+     "n": 16,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n3  1  7  1  3  0",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "031713",
+     "accepted": [
+      "031713",
+      "0,3,1,7,1,3"
+     ],
+     "explanation": "본 숫자 3 1 7 1 3 0을 거꾸로 쓰면 031713."
+    },
+    {
+     "n": 17,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n8  3  4  9  8  3",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "389438",
+     "accepted": [
+      "389438",
+      "3,8,9,4,3,8"
+     ],
+     "explanation": "본 숫자 8 3 4 9 8 3을 거꾸로 쓰면 389438."
+    },
+    {
+     "n": 18,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n5  1  0  5  9  2",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "295015",
+     "accepted": [
+      "295015",
+      "2,9,5,0,1,5"
+     ],
+     "explanation": "본 숫자 5 1 0 5 9 2를 거꾸로 쓰면 295015."
+    },
+    {
+     "n": 19,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n4  1  3  8  7  8",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "878314",
+     "accepted": [
+      "878314",
+      "8,7,8,3,1,4"
+     ],
+     "explanation": "본 숫자 4 1 3 8 7 8을 거꾸로 쓰면 878314."
+    },
+    {
+     "n": 20,
+     "type": "text",
+     "prompt": "다음 숫자를 기억하시오.\n7  8  2  7  8  6",
+     "memorizeSec": 6,
+     "recall": "방금 본 숫자를 거꾸로(마지막 숫자부터) 입력하시오.",
+     "answer": "687287",
+     "accepted": [
+      "687287",
+      "6,8,7,2,8,7"
+     ],
+     "explanation": "본 숫자 7 8 2 7 8 6을 거꾸로 쓰면 687287."
+    }
+   ]
+  }
+ ]
+}
